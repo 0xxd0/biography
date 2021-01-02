@@ -1,0 +1,27 @@
+name: Publish
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+      - uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+      - run: hugo --gc --minify
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: 0xxd0/0xxd0.github.io
+          publish_branch: master
+          publish_dir: ./public
+          force_orphan: true
+          commit_message: ${{ github.event.head_commit.message }}
+          personal_token: ${{ secrets.GHPAGES_DEPLOY_TOKEN }}

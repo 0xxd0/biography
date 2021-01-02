@@ -1,0 +1,38 @@
+[[main]]
+  name = "主页"
+  url = "#about"
+  weight = 10
+  
+[[main]]
+  name = "项目"
+  url = "#projects"
+  weight = 20
+
+[[main]]
+  name = "文章"
+  url = "#posts"
+  weight = 30
+
+#[[zh.menu.main]]
+#  name = "Talks"
+#  url = "#talks"
+#  weight = 50
+
+#[[main]]
+#  name = "近期学习"
+#  url = "#accomplishments"
+#  weight = 60
+
+[[main]]
+  name = "技能树"
+  url = "#skills"
+  weight = 100
+
+#[[zh.menu.main]]
+#  name = "Publications"
+#  url = "#featured"
+
+[[main]]
+  name = "联系方式"
+  url = "#contact"
+  weight = 120
