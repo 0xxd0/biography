@@ -140,6 +140,8 @@ if answer is equal to "Yes" then
 end if
 ```
 
+或者可以通过 [Retroactive](https://github.com/cormiertyshawn895/Retroactive) 直接安装。
+
 
 #### 从 iTunes 抓取下载数据
 
