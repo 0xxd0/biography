@@ -238,7 +238,7 @@ struct TractorPWT {
 }
 ```
 
-同时对于 `Array`，底层的 `buffer` 显然更喜欢以固定的大小去连续的存储元素，而不同的 `type` 却有着不同的内存布局，因此 Siwft 使用了 `Existential Containner` 去存储元素，这样一个容器提供了个三个字大小的 `value Buffer` 用于存储元素。
+同时对于 `Array`，底层的 `buffer` 显然更喜欢以固定的大小去连续的存储元素，而不同的 `type` 却有着不同的内存布局，因此 Swift 使用了 `Existential Containner` 去存储元素，这样一个容器提供了个三个字大小的 `value Buffer` 用于存储元素。
 
 但如果元素的内存布局过大导致 `value Buffer` 放不下，例如三个字对于 `struct Jet` 足够大，但对于 `struct Tractor`，因为 `String`.`size` + `Int`.`size` > 3 使得它无法存放在只有三个字大小的 `buffer` 中。
 
