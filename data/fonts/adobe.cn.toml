@@ -1,0 +1,11 @@
+# Font style metadata
+name = "default"
+
+# Optional Google font URL
+google_fonts = 'family=Noto+Sans+SC:wght@300;400;500&family=Inconsolata:ital,wght@0,300;0,400;0,500'
+
+# Font families
+heading_font = 'AdobeCleanHanSC'
+body_font = 'AdobeCleanHanSC'
+nav_font = 'AdobeCleanHanSC'
+mono_font = 'monospace'

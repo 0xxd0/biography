@@ -127,12 +127,13 @@ INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.
 
 ## 部署至 Github
 
-部署到 Github 上用于 `Github Pages` 的 repo 有两种形式：
+部署到 Github 上用于 Github Pages 的 repo 有两种形式：
 
-1. `repo_name` = `{username}.github.io`，例如：https://github.com/{username}/{username}.github.io，页面部署到 `master` 分之下，访问 Github Pages 时使用 `{username}.github.io`，常用于个人主页。
-2. `repo_name` = 随意，页面部署到 `gh-pages` 分支，访问 Github Pages 时使用 `${username}.github.io/${repo-name}`，常用于项目主页。
+1. 主页级 repo，页面部署到 `master` 分支下，访问 Github Pages 时使用 username.github.io，常用于个人主页。
+2. 项目级 repo，页面部署到 `gh-pages` 分支，访问 Github Pages 时使用 username.github.io/repo-name，常用于项目主页。
 
-在 `_config.yml` 内配置完部署信息后 (`deploy` 字段) 执行如下命令。
+在 _config.yml 内配置完部署信息后 (`deploy` 字段) 执行如下命令。
+
 ```
 $ hexo clean
 $ hexo generate
@@ -150,9 +151,9 @@ $ hexo d
 
 ## 绑定域名
 
-Github 使用一系列 **name-based** 虚拟 `WWW` server 部署所有静态博客的 wwwroot 目录。虚拟服务器的域名就是上文提及的 `{username}.github.io` 和 `{username}.github.io/{repo-name}`，因此将需要绑定的域名指向 Github 的服务器 `https://github.io`，把域名解析权下放到 Github。
+Github 使用一系列 **name-based** 虚拟 `WWW` server 部署所有静态博客的 wwwroot 目录。虚拟服务器的域名就是上文提及的 `{username}.github.io` 和 `{username}.github.io/{repo-name}`，因此将需要绑定的域名指向 Github 的服务器 https://github.io，把域名解析权下放到 Github。
 
-同时 Github 服务器需要知道如何解析域名，所以 Github Pages 用户需要将绑定的域名通过 wwwroot 目录下的 `CNAME` 文件告知 `WWW` server 域名 => `repo/branch` 的映射关系，所以在根目录 source 文件夹下建立一个 `CNAME` 文本文件，内容为绑定的域名。
+同时 Github 服务器需要知道如何解析域名，所以 Github Pages 用户需要将绑定的域名通过 wwwroot 目录下的 CNAME 文件告知 WWW server 域名 => `repo/branch` 的映射关系，所以在根目录 source 文件夹下建立一个 CNAME 文本文件，内容为绑定的域名。
 
 完成之后，输入命令查询下 dns 解析结果。
 
@@ -187,4 +188,4 @@ github.map.fastly.net.  142  IN  A  103.245.222.133
 1. [Github Pages](https://pages.github.com/)
 2. [Hexo.io](https://hexo.io/)
 3. [Hexo Documentation](https://hexo.io/docs/)
-3. [npm Docs](https://docs.npmjs.com/)。
+3. [npm Docs](https://docs.npmjs.com/)
