@@ -22,7 +22,7 @@ day_night = true
 #   Guide to font sets: https://wowchemy.com/docs/customization/#fonts
 #   Browse the latest built-in font sets at https://github.com/wowchemy/wowchemy-hugo-modules/tree/master/wowchemy/data/fonts
 #   Browse user installed font sets in `data/fonts/`
-font = "adobe.cn"
+font = "default"
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
@@ -233,14 +233,14 @@ plugins_js  = []
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine = 1
+  engine = 2
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
   [search.algolia]
-    app_id = ""
-    api_key = ""
-    index_name = ""
+    app_id = 'WZBSUUS1Q3'
+    api_key = '596942bbffd4a4e0772a0cae10205e5e'
+    index_name = "pages"
     show_logo = false
 
 ############################
@@ -269,8 +269,9 @@ plugins_js  = []
 ## Marketing
 ############################
 [marketing]
-  google_analytics = ""
-  google_tag_manager = ""
+  google_analytics = 'G-BEBL8ZB8H5'
+  google_tag_manager = 'G-BEBL8ZB8H5'
+  microsoft_clarity = '56w5b7iwco'
 
 ############################
 ## Content Management System
