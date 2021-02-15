@@ -105,9 +105,9 @@
   sri = "sha256-uL8LUd3zkI/lXvc/Hv/oOu8ld6RJcOZiUY/8c+I+3/o="
   url = "https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/%s/instantsearch-theme-algolia.min.css"
 [css.highlight]
-  version = "10.2.0"
+  version = "" # "10.6.0"
   sri = ""  # No SRI as highlight style is determined at run time.
-  url = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/%s/styles/%s.min.css"
+  url = "/css%s/%s.min.css" # "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/%s/styles/%s.min.css"
 [css.cookieconsent]
   version = "3.1.1"
   sri = "sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q="

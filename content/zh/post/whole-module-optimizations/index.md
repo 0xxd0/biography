@@ -44,14 +44,32 @@ categories:
 Swift 自诞生以来，就标榜了 **Performance**。WWDC 2015 上苹果为 Swift 2 引入的 Swift Compiler 特性 `Whole-Module Optimization` 将其再一次拉上了 **Performance** 的舞台，那么 `WMO` 到底做了些什么？
 
 通常来说，Swift 文件是单独编译的，这样的编译模式不但可以充分发挥多核心的优势做到并行编译而且还能做到单文件维度的增量编译。
-![single-file-optimization](./single-file-optimization.png)
+
+```mermaid
+stateDiagram-v2
+
+File1.swift --> Compiler
+Compiler --> File1.o
+File2.swift --> Compiler
+Compiler --> File2.o
+File3.swift --> Compiler
+Compiler --> File3.o
+```
 
 这很合情也和很合理，用 Apple 的话来说就是
 
 > That's **good** 😀
 
 然而这样会把 Optimizer 能获取到的上下文局限在单个文件内，那么显而易见的问题是，整个模块内的死函数、`Dynamic Dispatch` 的 `V-Table` 查询、泛型特例化等等都无法被很好的优化，所以精益求精的 Apple 认为，这还是不够 **good**，因此引入了 `Whole-Moudle Optimization`。
-![whole-module-optimization](./whole-module-optimization.png)
+
+```mermaid
+stateDiagram-v2
+
+File1.swift --> Compiler
+File2.swift --> Compiler
+File3.swift --> Compiler
+Compiler --> File.o
+```
 
 `WMO` 将整个模块的内的 Swift 文件合并成一个，把颗粒度提升到整个模块，这样可以做到在 Build Source 阶段，Optimizer 只进行一次模块级别的优化，用 Apple 的话来说就是：
 
