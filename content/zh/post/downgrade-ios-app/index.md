@@ -84,7 +84,9 @@ https://iosapps.itunes.apple.com/itunes-assets/Purple114/v4/bf/36/04/bf360426-52
 
 ### 通过 iTunes 获取 ipa
 
-> ⚠️ 2020 年 03 月 18 日 后，从 iTunes 12.6.5 的 App Store 下载应用会直接 SSL 握手失败，iTunes 的方式失效。
+{{% callout note %}}
+2020 年 03 月 18 日 后，从 iTunes 12.6.5 的 App Store 下载应用会直接 SSL 握手失败，iTunes 的方式失效。
+{{% /callout %}}
 
 自 macOS Mojave 之后，iTunes 的 App Store 的功能就逐渐淡出舞台了，[iTunes 12.6.5.3](https://secure-appldnld.apple.com/itunes12/091-87821-20180912-69177170-B085-11E8-B6AB-C1D03409AD2A/iTunes12.6.5.dmg) 是最后一个可以浏览 App Store 的 iTunes 版本。
 
@@ -184,7 +186,9 @@ end if
 
 ### 使用 Apple Configurator
 
-> 一筹莫展
+{{% callout warning %}}
+暂时还未找到通过 Apple Configurator 2 降级的方法
+{{% /callout %}}
 
 #### 安装 Apple Configurator 2 
 

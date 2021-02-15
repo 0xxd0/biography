@@ -1,8 +1,13 @@
 <div id="utteranc_thread"></div>
-<script src="https://utteranc.es/client.js"
-        repo="0xxd0/0xxd0.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
+{{ $src := "https://utteranc.es/client.js" }}
+{{ $repo := (printf "%s" (site.Params.comments.utteranc.repo)) }}
+{{ $issueTerm := (printf "%s" (site.Params.comments.utteranc.issue_term)) }}
+{{ $theme := (printf "%s" (site.Params.comments.utteranc.theme)) }}
+{{ $crossorigin := (printf "%s" (site.Params.comments.utteranc.crossorigin)) }}
+<script src="{{$src}}"
+        repo="{{$repo}}"
+        issue-term="{{$issueTerm}}"
+        theme="{{$theme}}"
+        crossorigin="{{$crossorigin}}"
         async>
 </script>

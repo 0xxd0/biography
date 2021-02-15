@@ -75,7 +75,7 @@ Swift 对于 `heap` 上实例的内存管理，采用的机制依旧是 `ARC`。
 
 ARC 的在性能上的开销主要是在 `swift_retain` & `swift_release` 所产生的多次 `indirection` 以及多线程的加锁保护。对于 `trivial` 的 `struct` 来说因为不涉及 `ARC`，因此没有影响。但当 `struct` 本身如果包含了需要 `ARC` 的实例时，他就变得不那么高效了。
 
-```
+```swift
 struct Car {
     var name: String
     var model: String
@@ -351,9 +351,10 @@ public func max<T>(_ x: T, _ y: T, _ pwt: TypePWT, _ vwt: TypeVWT) -> T where T 
 
 当然这种通过范型实现的 `Static Polymorphism` 仍然是 `Dynamic Dispathc` 虽然对性能开销有影响，但是通过 `Generic Specialization` 可以使其达到 `Static Dispathc`，同样之前的 [Whole Module Optimization 分析](../whole-module-optimizations/) 有提及，所以不再赘述。
 
-***
 
-## 2017.7.14 Update
+{{% callout note %}}
+2017-07-14 Updated
+{{% /callout %}}
 
 在 WWDC 2017 上，苹果终于出手这个解决 `valueBuffer` 的性能问题了，`Unpredictable Performance Cliff`。苹果的方案是采用 `COW Existential Buffers`，简单来说就是太大没法放进 `valueBuffer` 的 value，苹果对其采用和类一样的 `reference counting`，多个 `Existential Container` 可以共享相同的 `buffer` 直到这个 value 需要被修改才会被重新分配内存，以减少 `heap allocation` 的次数，典型的 COW 机制。
 
