@@ -1,5 +1,5 @@
 /*************************************************
-*  Wowchemy's Core Style
+*  Core Style
 **************************************************/
 
 $--color-text-primary: #24292e;
@@ -285,7 +285,7 @@ code {
 pre {
   padding: 1.0em;
   overflow: auto;
-  font-size: 85%;
+  font-size: 82%;
   line-height: 1.45;
   background-color: $--color-bg-tertiary;
   border-radius: 6px;
@@ -356,4 +356,12 @@ small,
 
 .responsive-wrap iframe {
   max-width: 100%;
+}
+
+/* GitHub gist */
+.gist { 
+  width:100% !important;
+}
+.gist-file.gist-data {
+  max-width: 880px;
 }
