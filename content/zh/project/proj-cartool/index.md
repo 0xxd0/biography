@@ -16,12 +16,8 @@ image:
 links:
 - icon: github
   icon_pack: fab
-  name: Star
+  name: GitHub
   url: https://github.com/0xxd0/cartool
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/Alchemistxxd
 url_code: ""
 url_pdf: ""
 url_slides: ""

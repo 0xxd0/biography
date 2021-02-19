@@ -1,5 +1,5 @@
 ---
-title: 文章
+title: 全部
 
 # View.
 #   1 = List

@@ -48,8 +48,6 @@ categories:
 
 {{< toc >}}
 
-{{< cta cta_text="Do something" cta_link="/" cta_new_tab="false" >}}
-
 ```mermaid
 sequenceDiagram
   participant Alice

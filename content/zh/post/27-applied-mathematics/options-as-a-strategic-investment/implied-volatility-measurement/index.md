@@ -1,12 +1,11 @@
 ---
 title: 如何衡量隐含波动率
-subtitle: 隐含波动率的高低的衡量指标
+linkTitle: Implied Volatility Measurement
 
-# Summary for listings and search engines
-summary: 隐含波动率的高低的衡量指标
+summary: 隐含波动率衡量方法 Implied Volatility Measurement
 
 # Link this post with a project
-projects: []
+type: book
 
 # Date published
 date: 2020-07-28T15:44:16Z
@@ -16,17 +15,6 @@ lastmod: 2020-07-28T15:44:16Z
 
 # Is this an unpublished draft?
 draft: false
-
-# Show this page in the Featured widget?
-featured: false
-
-# Featured image
-# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
-image:
-  caption: Implied Volatility
-  focal_point: Smart
-  placement: 1
-  preview_only: false
 
 authors:
 - admin
@@ -41,6 +29,8 @@ tags:
 categories:
 - Applied Mathematics
 - Financial Mathematics
+
+weight: 2
 ---
 
 隐含波动率（或称引申波幅，IV ）是了解何时买卖期权的最重要指标之一。IV 由特定股票或期货的期权合约的当前价格反推得出，用百分比表示，表示基于当前的期权价格，底层标的年化波动预期的标准差。例如，对于 200 美元的股票，IV 的 25％ 表示未来一年的标准差范围为 50 美元，更多关于 IV 的概念可以参考之前的文章。

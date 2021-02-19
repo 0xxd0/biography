@@ -47,6 +47,9 @@ categories:
 The `objc-evolutions` repository maintains personal major proposals for exploration and enhancements to the The Objective-C Programming Language.
 
 
+{{< list_children >}} 
+
+
 ### Conditional Binding
 
 在 Swift 中我们可以用 if let、guard let、where let 等来做到 `Conditional Binding`。
@@ -159,8 +162,6 @@ T max(T x, T y) {
 let maxInt = max(1, 2);
 let maxDouble = max(1.0, 2.0);
 ```
-
-{{< list_children >}}
 
 ## 进一步了解
 

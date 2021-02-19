@@ -158,12 +158,14 @@ TensorFlow 是本届 GDD 的重点照顾对象，在开幕演讲中一位 Googla
 同时一起宣布的还有 Google AI 中国中心会在北京以及上海举行机器学习应用冬令营，并且在可能的情况下会提供 Google AI 工程师的实习机会，将其更好的运用到实战。
 
 紧接着开幕演讲，主会场在 11:00 召开了面向所有开发者的 TensorFlow 简介。
-![introduce-to-tensorflow](introduce-to-tensorflow.jpg)
+
+{{< figure src="introduce-to-tensorflow.jpg" title="Introduce to Tensorflow" >}}
 
 会上介绍了什么是 TensorFlow、它是如何运作的、它该如何使用。介绍了 TensorFlow 这个平台如何更方便的帮助开发者构建要用于人工智能应用中的机器学习模型。
 
 会上展示了一个 Fashion MNIST 的现场 Demo。
-![fashion-mnist](fashion-mnist.jpg)
+
+{{< figure src="fashion-mnist.jpg" title="Fashion MNIST" >}}
 
 具体演示了如何利用 Keras 对 70000 个训练样本、10 个类别进行神经网络训练，包涵 Keras 一系列的：
 
@@ -186,7 +188,8 @@ TensorFlow 是本届 GDD 的重点照顾对象，在开幕演讲中一位 Googla
 ## Flutter 的磅礴野心
 
 [Flutter](https://flutter.io) 可以说是本届 GDD 上的焦点主题，在此次大会上 Google 公布了 Flutter Release Preview 2，距离 Flutter 正式 Release 也变得指日可待。 
-![flutter-release-preview-2](./flutter-release-preview-2.jpg)
+
+{{< figure src="flutter-release-preview-2.jpg" title="Flutter Release Preview 2" >}}
 
 在 20 日当天有关 Flutter 的 Keynote 一共被安排了 4 场，下午 4:45 开始的连续两场的内容关注点都在 Flutter 底层原理剖析以及 High Performance 上，因此笔者选择了去这两场。
 
@@ -216,7 +219,8 @@ TensorFlow 是本届 GDD 的重点照顾对象，在开幕演讲中一位 Googla
 因此性能优化的重任落到开发者的身上了，又是一项体力活。在整个演示过程中使用到了一部分 Profile 工具以及 Debug Flag 来监测 App 的 Performance，具体可以在 [Flutter Performance Profiling](https://flutter.io/ui-performance/) 以及 [Debugging Flutter Apps](https://flutter.io/debugging/) 找到。
 
 到了第二场 Keynote 上来了个幽默的老哥，这场的主题是《深入介绍 Flutter Graphics 性能》。
-{{< figure src="./flutter-graphics-hero.jpg" title="深入介绍 Flutter Graphics 性能" >}}
+
+{{< figure src="flutter-graphics-hero.jpg" title="深入介绍 Flutter Graphics 性能" >}}
 
 在进行了一轮 Skia 牛逼吹爆后，进入正题，主要内容围绕着通过分析绘图指令来不断优化 App 的性能。Flutter 的渲染原理是将一个渲染帧录制成 SkPicture (skp) 提交给 Skia 进行渲染，利用这个特点，通过捕捉一帧 skp，配合 [Skia Debugger](https://debugger.skia.org)，可以精确分析到单个渲染帧中每一条绘图指令，整场 Keynote 大部分时间都花在现场演示优化，具体不在此赘述。
 
@@ -230,24 +234,28 @@ TensorFlow 是本届 GDD 的重点照顾对象，在开幕演讲中一位 Googla
 随着业界毒瘤果的 iPhone X 开卖，国内各大安卓厂商也纷纷跟风推出刘海屏的机器，说实话笔者个人认为刘海屏这个设计真的很丑。面对这么一大波国产刘海屏手机，谷歌非但没置之不理，反而却十分接地气的在 Android 9 中添加了刘海屏的适配方案[显示屏缺口支持](https://developer.android.com/about/versions/pie/android-9.0)，颇有大厂风范。
 
 在 Android 9 中利用 DeepMind 通过对 App 进行使用频率分组来尽可能降低 CPU 唤醒频率以达到延长电池的续航能力，官方称唤醒频率被有效的降低了 30%。
-![android-battery](./android-battery.jpg)
+
+{{< figure src="android-battery.jpg" title="Android Battery" >}}
 
 对于非 SDK 接口的调用在 Android 9 会被限制，具体可以参考[对非 SDK 接口的限制](https://developer.android.com/about/versions/pie/restrictions-non-sdk-interfaces)，旨在提高应用的稳定性。
-![android-sdk-restrict](./android-sdk-restrict.jpg)
+
+{{< figure src="android-sdk-restrict.jpg" title="Android SDK Restrict" >}}
 
 Google 在 2018 Google I/O 上发布了新的框架组件 JetPack，今次在 GDD 上再次拿出来发酵一下，大致如上图所示。其中的 Navigation 和 iOS 中的 Storyboard 有着异曲同工之妙。JetPack 包含了大量的简化开发的新框架，具体可以参考官方文档 [Android Jetpack](https://developer.android.google.cn/jetpack/)。
-![android-jetpack](./android-jetpack.jpg)
+
+{{< figure src="android-jetpack.jpg" title="Android JetPack" >}}
 
 Google 通过 [Android App Bundle](https://developer.android.google.cn/platform/technology/app-bundle/) 进行 apk 的动态分发，以提供 apk 的瘦身效果。在 iOS 中有类似的 [On Demand resource](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/Tagging.html)，但比起 Android App Bundle] 有着更多的局限性。
-![android-app-bundle](./android-app-bundle.jpg)
 
+{{< figure src="android-app-bundle.jpg" title="Android APP Bundle" >}}
 
 ## 还有 WearOS、Firebase、ARCore
 
 #### WearOS
 
 WearOS 在这届 GDD 上更多的是商业上的介绍，广告以及产品上的介绍比较多，在开幕式上也花了一定的篇幅去介绍 WearOS 的合作伙伴以及品牌。与开发者相关的有《Wear OS 表盘开发入门》以及《Wear OS 应用开发入门》，由于时间有限没有前去与会。
-![ARCore](./arcore.jpg)
+
+{{< figure src="arcore.jpg" title="ARCore" >}}
 
 #### ARCore
 
@@ -256,10 +264,12 @@ ARCore 也是本届 GDD 的焦点之一，ARCore 是 Google 的增强现实体�
 #### Firebase
 
 这次大会上重点介绍了下 Firebase 的 Realtime Database，看上去和 CloudKit 差不多，主要的重点还是之后的 ML Kit for Firebase。结合了 ML Kit 的 Firebase 在 TensorFlow Lite 助力下，App 可以动态加载训练模型而非直接打包在 App 中，从而达到模型热升级的目的，对中小型开发团队来说是相当有好的。
-![mlkit](./mlkit.jpg)
+
+{{< figure src="mlkit.jpg" title="ML Kit" >}}
 
 
 ## 最后
 
 总得来说，这次 GDD 还是收获不小，Google 给予了开发者对于未来技术的引导、解答以及分享。技术分享有深有浅，还有许多非开发相关、针对商业市场的 Keynote 可供选择。未来 TensorFlow 依然是 Google 的绝对重点，Android 的整个生态越发趋于完善与规范，Flutter 蓄势待发准备大一统。不过比较可惜的是今年没有 IoT 的开发版可以拿，期待明年的 GDD。
-![end](./end.jpg)
+
+{{< figure src="end.jpg" title="終わり" >}}

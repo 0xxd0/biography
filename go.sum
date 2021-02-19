@@ -1,4 +1,8 @@
 github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20210211185922-b811f9a1bb9c h1:N1VFakCFtViGokG+7cmlGilBPHfIZ3mnMdBXUnFHgoU=
 github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20210211185922-b811f9a1bb9c/go.mod h1:TU3QDPUdBSQnvDP5QVCwjAkBIdVMS/bKFA8jr3eI5AY=
+github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20210217222139-68595a20aead h1:AUOh3/FIwuOCFTdscpWsqkLfbV+aCOUPRchFU2XqfDk=
+github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20210217222139-68595a20aead/go.mod h1:TU3QDPUdBSQnvDP5QVCwjAkBIdVMS/bKFA8jr3eI5AY=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20210211185922-b811f9a1bb9c h1:rcd9H2OHyw3xiu2H140g22AUvYZPBfvynAyTfubpvg4=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20210211185922-b811f9a1bb9c/go.mod h1:H22qfH9qj3FWwsk7+bAZpmT24yRGNQURah2/IRwjbn8=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20210217222139-68595a20aead h1:mn44MABTJQiXL1QXTnptmBX/o3ZNLml5gMrkXDmuyK0=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20210217222139-68595a20aead/go.mod h1:H22qfH9qj3FWwsk7+bAZpmT24yRGNQURah2/IRwjbn8=

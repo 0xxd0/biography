@@ -1,18 +1,18 @@
 ---
-title: 隐含波动率
-subtitle: 隐含波动率全解析
+title: 如何选配一个滑板
+subtitle: 滑板的组成以及配件选购
 
 # Summary for listings and search engines
-summary: 隐含波动率全解析
+summary: 滑板的组成以及配件选购
 
 # Link this post with a project
 projects: []
 
 # Date published
-date: 2020-07-10T15:44:16Z
+date: 2020-09-09T00:00:00Z
 
 # Date updated
-lastmod: 2020-07-10T15:44:16Z
+lastmod: 2020-09-09T00:00:00Z
 
 # Is this an unpublished draft?
 draft: true
@@ -23,26 +23,30 @@ featured: false
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: Implied Volatility
-  focal_point: Smart
-  placement: 1
+  caption: ''
+  focal_point: ""
+  placement: 2
   preview_only: false
 
 authors:
 - admin
 
 tags:
-- Implied Volatility
-- IV
+- Skateboard
 
 categories:
-- Applied Mathematics
-- Financial Mathematics
+- Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
 ---
 
-## Black Scholes Model
+## 序
+
+新的滑板到了
+
+
+## 滑板大件的选购
+
+
+## 滑板的保养
 
 
 ## 进一步了解
-
-1. [Black Scholes Model](https://www.investopedia.com/terms/b/blackscholes.asp)

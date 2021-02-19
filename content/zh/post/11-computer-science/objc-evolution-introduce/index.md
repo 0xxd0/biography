@@ -46,6 +46,7 @@ Swift 3.0 问世之际，随之而来的是 `API` 的清晰语意、更加完备
 
 今次回顾下 Objective-C，依稀能看出语言设计上的年代感，对于 Objective-C 来说，如果当初 Swift 没有出现的话，Objective-C 3.0 是否能如期问世？
 
+{{< cta cta_text="View **The Objective-C Programming Language Evolution**" cta_link="../objc-evolution-proposals" cta_new_tab="true" >}}
 
 ## Objective-C Evolution
 
@@ -97,7 +98,7 @@ Objective-C 最大优点在于非常动态，这同样也是其缺点。高度�
 得益于 LLVM 以及出色的 Clang 前端，使得 Swift 以及一些现代语言的语法特性在 ObjC 中出现具有了可能性。拟参考 [apple/swift-evolution](https://github.com/apple/swift-evolution) 的形式，基于对 Objective-C 原生特性拓展研究以及衍生特性的挖掘目的，建立 The Objective-C Programming Language Evolution 作为 Objective-C 的 CodeLab。
 
 
-### 解放
+### 结语
 
 虽然目前 Swift 在苹果的推动下气势越来越猛、野心也越来越大，未来越来越多的语言特性、更完备的 `stdlib` 以及更加稳定的 ABI 成为了苹果当下的主要目标。但包括苹果自己的框架在内，以及仍然有许多应用、优秀的开源库无法从 Objective-C/C++ 剥离。个人认为一些优秀并且已经被开源社区实现的特性是可以作为语言的标准特性加入到 Objective-C 的，就看 Apple 有没有这个意愿发布 Objective-C 3.0，毕竟 Apple 和 **{{< icon name="steam" pack="fab" >}}G 胖**还是不一样的。
 

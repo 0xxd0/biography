@@ -1,12 +1,12 @@
 --- 
 # Page title
-title: Options
+title: 期权投资策略
 
 # Title for the menu link if you wish to use a shorter link title, otherwise remove this option.
-linktitle: Options
+linktitle: 主页
 
 # Page summary for search engines.
-summary: Blah, blah, blah...
+summary: 期权投资策略 OASI
 
 # Date page published
 date: 2020-09-09
@@ -27,8 +27,6 @@ tags:
 - Implied Volatility
 
 categories:
-- Economics
-- Economics, General
+- Applied Mathematics
+- Financial Mathematics
 ---
-
-{{< list_children >}}

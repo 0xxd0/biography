@@ -1,7 +1,7 @@
 ---
-title: The Objective-C Programming Language Evolution
+title: Objective-C Evolution
 
-summary: This maintains personal proposals for changes and enhancements to the The ObjC Programming Language.
+summary: The Objective-C Programming Language Evolution
 
 tags:
 - Objective-C
@@ -19,7 +19,7 @@ image:
 links:
 - icon: github
   icon_pack: fab
-  name: Star
+  name: GitHub
   url: https://github.com/0xxd0/objc-evolution
 url_code: ""
 url_pdf: ""

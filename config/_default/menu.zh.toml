@@ -20,7 +20,7 @@
 
 #[[main]]
 #  name = "近期学习"
-#  url = "#accomplishments"
+#  url = "#readings"
 #  weight = 60
 
 [[main]]
@@ -36,3 +36,8 @@
   name = "联系方式"
   url = "#contact"
   weight = 120
+
+[[main]]
+  name = "<b>索引</b>"
+  url = "/post/cip"
+  weight = 130

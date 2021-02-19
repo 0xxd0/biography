@@ -1,6 +1,6 @@
 ---
 title: 未越狱如何降级 iOS 应用版本 
-subtitle: ipa 下载流程剖析
+subtitle: 移动端应用在不断迭代过程中，和最初的样子渐行渐远，有变得更好的，也有变得愈来愈糟糕的，所以降级 iOS 应用版本就变成了一个潜在的需求。
 
 # Summary for listings and search engines
 summary: 移动端应用在不断迭代过程中，和最初的样子渐行渐远，有变得更好的，也有变得愈来愈糟糕的，所以降级 iOS 应用版本就变成了一个潜在的需求。
@@ -95,11 +95,11 @@ https://iosapps.itunes.apple.com/itunes-assets/Purple114/v4/bf/36/04/bf360426-52
 
 在 Mojave 之后安装 iTunes 会受到限制，需要绕过校验系统版本的 iTunes Installer，直接提取安装包内部的 iTunes.app 移至 /Applications 使用。在 macOS Mojave 10.14.4 之后，苹果直接对 iTunes 版本做了限制，打开 iTunes 会提示你当前系统不支持 12.6.5，这时候需要提高 info.plist 里的版本号绕过 macOS 的校验，可以使用 Apple Script 来完成上述步骤。
 
-<script src="https://gist.github.com/0xxd0/c5e410690e501de1786e72499b03eff4.js"></script>
+{{< gist 0xxd0 c5e410690e501de1786e72499b03eff4 >}}
 
 针对历史版本的 iTunes，以及其残留物无法删除干净的情况下，可以使用如下 `shell` 脚本。
 
-<script src="https://gist.github.com/0xxd0/f4ad266c6df5b9b62433f86a0881b9b6.js"></script>
+{{< gist 0xxd0 f4ad266c6df5b9b62433f86a0881b9b6 >}}
 
 完成安装后，如果启动 iTunes 时提示 "iTunes Library.itl" 错误，则需要移除 Music 目录下 iTunes 文件夹内 iTunes Library.itl 文件。此外也可以通过 [Retroactive](https://github.com/cormiertyshawn895/Retroactive) 安装 iTunes，同样也包括其他被苹果删除的内建应用。
 
@@ -131,7 +131,7 @@ https://iosapps.itunes.apple.com/itunes-assets/Purple114/v4/bf/36/04/bf360426-52
 
 5. 根据 [MIXRANK](https://mixrank.com/appstore/apps/414478124/versions) 查询版本对应的 Build 号。
 
-![Build Number](./build-version-map.png)
+{{< figure src="build-version-map.png" title="Build Number" >}}
 
 6. 取消之前的下载，并再次下载触发断点，编辑 Request，将请求的 `appExtVrsId` 字段的值替换成对应的版本号，并 Excute。
 
@@ -158,11 +158,11 @@ https://iosapps.itunes.apple.com/itunes-assets/Purple114/v4/bf/36/04/bf360426-52
 
 首先从 Apple Configurator 2 发起下载请求，以 WeChat 为例，选择 WeChat 点击 Add。
 
-![WeChat](apple-configurator-2-wechat.png)
+{{< figure src="apple-configurator-2-wechat.png" title="WeChat" >}}
 
 从 Apple Configurator 2 抓取下载数和 iTunes 的唯一区别点在于断点的位置，如下图所示。
 
-![Break Point](./buyitunes-breakpoint.png)
+{{< figure src="buyitunes-breakpoint.png" title="Break Point" >}}
 
 其余流程在理论上没有任何区别，但如[“Apple Configurator 的 ipa 下载流程”](#Apple-Configurator-的-ipa-下载流程)中所述，核心在于如何修改版本，暂时还没找到方法，目前苹果应该是把 Build Number 查询与修改这一步放到了服务端。
 
@@ -171,7 +171,7 @@ https://iosapps.itunes.apple.com/itunes-assets/Purple114/v4/bf/36/04/bf360426-52
 
 使用 Apple Configurator 2，添加一个 App，点击 Choose from my Mac 选择上一步骤中抓取到的 ipa。
 
-![Install ipa](./apple-configurator-2-install-ipa.png)
+{{< figure src="apple-configurator-2-install-ipa.png" title="Install IPA" >}}
 
 按步骤安装完成 ipa 的部署即可。
 
