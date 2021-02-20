@@ -1,0 +1,21 @@
+<!-- Instragram shortcode refers to a deprecated Instragram API endpoint --> 
+<!-- issue: https://github.com/gohugoio/hugo/issues/7879 -->
+{{- $pc := .Page.Site.Config.Privacy.Instagram -}}
+{{- if not $pc.Disable -}}
+    {{- if $pc.Simple -}}
+        {{ template "_internal/shortcodes/instagram_simple.html" . }}
+    {{- else -}}
+        {{ $id := .Get 0 }}
+        {{ $index := .Get 1 }}
+        {{ $hideCaption := cond (eq (.Get 1) "hidecaption") "1" "0" }}
+        {{ with getJSON "https://instagram.com/p/" $id "?__a=1" }}
+        <figure>
+            <img src="{{ (index .graphql.shortcode_media.edge_sidecar_to_children.edges $index).node.display_url }} " alt="{{ (index .graphql.shortcode_media.edge_sidecar_to_children.edges $index).node.accessibility_caption }}" />
+            {{- if eq $hideCaption "0" -}}
+            {{ $caption := (index .graphql.shortcode_media.edge_media_to_caption.edges $index).node.text }}
+            <figcaption>{{ $caption }}</figcaption>
+            {{ end }}
+        </figure>    
+        {{ end }}
+    {{- end -}}
+{{- end -}}

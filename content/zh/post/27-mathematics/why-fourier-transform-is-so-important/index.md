@@ -1,18 +1,19 @@
 ---
-title: 论读书无用论
-subtitle: 读书的价值以及意义
+title: 为什么傅立叶变换这么重要
+
+subtitle: 傅立叶变换将时域型号转换频域信号的原理
 
 # Summary for listings and search engines
-summary: 读书的价值以及意义
+summary: 傅立叶变换将时域型号转换频域信号的原理
 
 # Link this post with a project
 projects: []
 
 # Date published
-date: 2020-03-03T00:00:00Z
+date: 2018-06-18T00:00:00Z
 
 # Date updated
-lastmod: 2020-03-03T00:00:00Z
+lastmod: 2018-06-18T00:00:00Z
 
 # Is this an unpublished draft?
 draft: true
@@ -32,13 +33,15 @@ authors:
 - admin
 
 tags:
-- Essay
+- Fourier Transform
 
 categories:
-- Social Sciences, Other
+- Mathematics
+- Mathematics, General
 ---
 
+## 序
 
 ## 进一步了解
 
-1. [读书无用论](https://zh.wikipedia.org/wiki/读书无用论)
+<!-- https://www.zhihu.com/question/279808864/answer/552617806 -->
