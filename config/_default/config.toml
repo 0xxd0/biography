@@ -35,7 +35,7 @@ enableEmoji = true
 enableRobotsTXT = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
-ignoreErrors = ["error-remote-getjson"]
+# ignoreErrors = ["error-remote-getjson"]
 
 [permalinks]
   # If only creating events which are talks, we can optimize event URLs for talks.

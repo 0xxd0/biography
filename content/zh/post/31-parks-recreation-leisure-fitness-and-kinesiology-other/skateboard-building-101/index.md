@@ -38,12 +38,19 @@ tags:
 categories:
 - Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
 
+links:
+  - icon_pack: fab
+    icon: instagram
+    name: Instagram
+    url: 'https://www.instagram.com/p/CLgpzQlM2HM/'
+
 # {{< ins CLgpzQlM2HM 7 >}}
 ---
 
 ## 序
 
 新的滑板到了
+
 
 ## 从零开始了解滑板
 
@@ -58,7 +65,7 @@ categories:
 
 ### Trucks
 
-{{< figure src="truck.png" title="" >}}
+{{< figure src="truck.png" width="500" title="" >}}
 
 以目前的工艺水平来看，桥建议一步到位上进口桥，主流品牌有：
 
@@ -95,14 +102,13 @@ categories:
 
 个人用的是 I 桥 144 Stage 11 Forged Hollow Chris Joslin Silver Blue Standard。
 
-{{< figure src="https://ptw.nhs-inc.com/product_images/48367.jpg" title="144 Stage 11 Forged Hollow Chris Joslin Silver Blue Standard" >}}
+{{< figure src="https://ptw.nhs-inc.com/product_images/48367.jpg" width="600" title="144 Stage 11 Forged Hollow Chris Joslin Silver Blue Standard" >}}
 
 
 ### Deck
 
-{{< figure src="deck-side-view.png" title="" >}}
-
-{{< figure src="deck-top-view-mounting-holes.png" title="" >}}
+{{< figure src="deck-side-view.png" width="550" title="侧视图" >}}
+{{< figure src="deck-top-view-mounting-holes.png" width="550" title="俯视图" >}}
 
 比较好的版面有：
 
@@ -130,7 +136,7 @@ categories:
 
 ### Wheels
 
-{{< figure src="wheels.png" title="" >}}
+{{< figure src="wheels.png" width="300" title="" >}}
 
 动作轮一般是硬轮，硬度在 99A - 105A 左右，直径一般在 52mm - 54mm 偏小，回弹更好做滑板动作。刚开始练习时，硬轮由于硬度关系很容易被小碎石卡住，如果没掌握正确的摔倒姿势的话就会很危险。反之公路轮为软轮，有时也会被叫做刷街轮，通常硬度在 78A 到 90A 左右，公路轮比较大和软一般会配高桥，直径一般在 55mm - 60mm，在公路上不震脚可以压过小石头，相对动作轮更安全舒服。所以建议同时有刷街和做动作需求的备两套轮子，并且由于取轴承是比较麻烦的事情，所以建议每套轮子都配上一套轴承。
 
@@ -145,7 +151,7 @@ categories:
 
 ### Bearings
 
-{{< figure src="bearings.png" title="" >}}
+{{< figure src="bearings.png" width="300" title="" >}}
 
 轴承的核心在于是否稳定，不容易爆轴，关于轴承的标准有 ABEC-5、ABEC-7、ABEC-9 等，比起数值来说更重要的还是稳定性。轴承比较推荐 Skate One 的 BONES，Skate One 还有另一个轴承品类 MINI LOGO，个人比较推荐 BONES Red，为国内代工。
 
@@ -159,7 +165,7 @@ categories:
 
 ### 板钉
 
-{{< figure src="bolts-nuts.png" title="" >}}
+{{< figure src="bolts-nuts.png" width="300" title="" >}}
 
 最普通的配件，没什么好说的，太贵的就是智商税。
 

@@ -28,10 +28,11 @@ image:
   preview_only: false
 
 links:
-- icon: twitter
+- icon: google
   icon_pack: fab
-  name: Follow
-  url: https://twitter.com/Alchemistxxd
+  name: Agenda
+  url: https://www.google.cn/intl/en/events/developerdays2018/agenda/
+
 url_code: ""
 url_pdf: ""
 url_slides: ""
