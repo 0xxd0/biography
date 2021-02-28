@@ -31,3 +31,8 @@ categories:
 ## 索引
 
 {{< ls_children show_summary="false" >}}
+
+
+## 进一步了解
+
+1. [IFIXIT](https://www.ifixit.com)

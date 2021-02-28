@@ -34,12 +34,42 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/Alchemistxxd
 - icon: github
   icon_pack: fab
   link: https://github.com/0xxd0
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/Alchemistxxd
+- icon: facebook
+  icon_pack: fab
+  link: https://www.facebook.com/Alchemistxxd/
+- icon: youtube
+  icon_pack: fab
+  link: https://twitter.com/Alchemistxxd
+- icon: discord
+  icon_pack: fab
+  link: 
+- icon: steam
+  icon_pack: fab
+  link:
+- icon: xbox
+  icon_pack: fab
+  link: 
+- icon: instagram
+  icon_pack: fab
+  link: 
+- icon: tumblr
+  icon_pack: fab
+  link: 
+- icon: tiktok
+  icon_pack: fab
+  link: 
+- icon: linkedin
+  icon_pack: fab
+  link: 
+- icon: zhihu
+  icon_pack: fab
+  link: https://www.zhihu.com/people/xu-xu-dong-86
 - icon: envelope
   icon_pack: fas
   link: 'mailto:xudongloveslife@gmail.com'
