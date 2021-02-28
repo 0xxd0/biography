@@ -1,43 +1,26 @@
 ---
-title: 如何在 iCloud 中屏蔽不需要同步的文件
-subtitle: 通过文件名屏蔽 iCloud 同步
+title: HT0030 如何在 iCloud 中屏蔽不需要同步的文件
 
-# Summary for listings and search engines
-summary: 通过文件名屏蔽 iCloud 同步
+linktitle: HT0030 如何在 iCloud 中屏蔽不需要同步的文件
 
-# Link this post with a project
-projects: []
+type: book
 
-# Date published
 date: 2017-01-11T00:00:00Z
 
-# Date updated
-lastmod: 2017-1-12T00:00:00Z
-
-# Is this an unpublished draft?
 draft: false
-
-# Show this page in the Featured widget?
-featured: false
-
-# Featured image
-# Place an image named featured.jpg/png in this page's folder and customize its options here.
-image:
-  caption: ''
-  focal_point: ""
-  placement: 2
-  preview_only: false
 
 authors:
 - admin
 
 tags:
 - macOS
-- iCloud
 
 categories:
 - Computer Science 
-- OS. Operation System
+- OS. Operating Systems
+- macOS
+
+weight: 0030
 ---
 
 ##### 文件名

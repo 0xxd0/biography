@@ -1,0 +1,74 @@
+{{ $items_type := (.Get "page_type") | default "post" }}
+{{ $category := (.Get "category") }}
+{{ $tag := (.Get "tag") }}
+{{ $items_count := (.Get "count") | default 65535 }}
+{{ $items_sort := (.Get "order") | default "desc" }}
+{{ $items_offset := (.Get "offset") | default 0 }}
+{{ $publication_type := (.Get "publication_type") }}
+{{ $author := (.Get "author") }}
+{{ $exclude_featured := (.Get "exclude_featured") | default false }}
+{{ $exclude_future := (.Get "exclude_future") | default false }}
+{{ $exclude_past := (.Get "exclude_past") | default false }}
+
+{{/* Query */}}
+{{ $query := where site.Pages "Type" $items_type }}
+{{ $archive_page := site.GetPage "Section" $items_type }}
+
+{{/* Filters */}}
+{{ if $tag }}
+  {{ $archive_page = site.GetPage (printf "tags/%s" (urlize $tag)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $category }}
+  {{ $archive_page = site.GetPage (printf "categories/%s" (urlize $category)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $publication_type }}
+  {{ $archive_page = site.GetPage (printf "publication_types/%s" $publication_type) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $author }}
+  {{ $archive_page = site.GetPage (printf "authors/%s" (urlize $author)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $exclude_featured }}
+  {{ $query = where $query "Params.featured" "!=" true }}
+{{ end }}
+{{ if $exclude_future }}
+  {{ $query = where $query "Date" "<" now }}
+{{ end }}
+{{ if $exclude_past }}
+  {{ $query = where $query "Date" ">=" now }}
+{{ end }}
+
+{{ $count := len $query }}
+
+{{/* Sort */}}
+{{ $sort_by := "Date" }}
+{{ $query = sort $query $sort_by $items_sort }}
+
+{{/* Offset and Limit */}}
+{{ if gt $items_offset 0 }}
+  {{ $query = first $items_count (after $items_offset $query) }}
+{{ else }}
+  {{ $query = first $items_count $query }}
+{{ end }}
+
+{{ $columns := (.Get "columns") | default "1" }}
+{{ $view := (.Get "view") }}
+
+<div class="col-12 {{if eq $columns "2"}}col-lg-8{{end}}">
+
+  {{ range $post := $query }}
+    {{ if eq $view 1 }}
+      {{ partial "li_list" . }}
+    {{ else if eq $view 3 }}
+      {{ partial "li_card" . }}
+    {{ else if eq $view 4 }}
+      {{ partial "li_citation" . }}
+    {{ else }}
+      {{ partial "li_compact" . }}
+    {{ end }}
+  {{end}}
+
+</div>

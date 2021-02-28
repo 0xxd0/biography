@@ -93,7 +93,7 @@ $$ n = Period $$
 $$ IVR = \frac { IV_{ Current } − IV_{ 52LowestLow } }{ IV_{ 52HighestHigh } − IV_{ 52LowestLow} } \times 100 \% $$
 
 2020 年 07 月 28 日，全天隐含波动率的平均值为 37.04%，代入公式计算：
- 
+
 $$ IV_{ Current } (0.3704) − IV_{ 52LowestLow } (.094) = 0.2764 $$ 
 
 $$ IV_{ 52HighestHigh }(1.4669) − IV_{ 52LowestLow } (.094) = 1.3729 $$

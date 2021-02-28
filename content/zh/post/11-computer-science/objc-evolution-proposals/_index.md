@@ -47,7 +47,7 @@ categories:
 The `objc-evolutions` repository maintains personal major proposals for exploration and enhancements to the The Objective-C Programming Language.
 
 
-{{< list_children >}} 
+{{< ls_children show_summary="false" >}} 
 
 
 ### Conditional Binding
