@@ -66,6 +66,18 @@ categories:
 
 ## 写作工具
 
+### 博客系统
+
+#### Hugo
+
+开发者文档 
+
+[Docs](https://gohugo.io/documentation/)
+
+#### Hexo
+
+关于 Hexo 的搭建可以参考 {{< cite page="create-blog-system" view="4" >}} 
+
 ### 用富媒体润色文本
 
 #### 图床
