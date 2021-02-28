@@ -25,6 +25,7 @@ weight: 11
 
 {{< figure src="https://developer.apple.com/library/archive/releasenotes/ObjectiveC/RN-TransitioningToARC/Art/ARC_Illustration.jpg" >}}
 
+https://www.jianshu.com/p/0258ed2133ff
 
 ## 进一步了解
 
