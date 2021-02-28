@@ -1,9 +1,12 @@
 ---
-title: 未越狱如何降级 iOS 应用版本 
+title: HT0026 未越狱如何降级 iOS 应用版本
+
 subtitle: 移动端应用在不断迭代过程中，和最初的样子渐行渐远，有变得更好的，也有变得愈来愈糟糕的，所以降级 iOS 应用版本就变成了一个潜在的需求。
 
 # Summary for listings and search engines
 summary: 移动端应用在不断迭代过程中，和最初的样子渐行渐远，有变得更好的，也有变得愈来愈糟糕的，所以降级 iOS 应用版本就变成了一个潜在的需求。
+
+type: book
 
 # Link this post with a project
 projects: []
@@ -40,6 +43,9 @@ tags:
 categories:
 - Computer Science 
 - OS. Operating Systems
+- macOS
+
+weight: 0026
 ---
 
 ## 如何获取 ipa
