@@ -39,5 +39,5 @@
 
 [[main]]
   name = "<b>索引</b>"
-  url = "/post/cip"
+  url = "/post/cip/code"
   weight = 130

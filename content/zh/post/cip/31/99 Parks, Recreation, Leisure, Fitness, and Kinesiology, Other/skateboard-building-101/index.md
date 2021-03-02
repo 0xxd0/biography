@@ -38,6 +38,9 @@ tags:
 categories:
 - Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
 
+cips:
+- Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
+
 links:
   - icon_pack: fab
     icon: instagram

@@ -1,5 +1,6 @@
 ---
 title: Clang Attributes 使用文档
+
 subtitle: Clang Attributes 实战备忘录
 
 # Summary for listings and search engines
@@ -34,6 +35,8 @@ authors:
 tags:
 - Compiler
 - Clang
+
+cips: 
 
 categories:
 - Computer Science 

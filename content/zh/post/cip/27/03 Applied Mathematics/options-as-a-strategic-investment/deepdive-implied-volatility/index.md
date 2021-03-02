@@ -23,7 +23,7 @@ tags:
 - Implied Volatility
 - IV
 
-categories:
+cips:
 - Applied Mathematics
 - Financial Mathematics
 

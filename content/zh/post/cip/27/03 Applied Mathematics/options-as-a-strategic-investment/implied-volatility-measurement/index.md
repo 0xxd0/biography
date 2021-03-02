@@ -26,6 +26,10 @@ tags:
 - IVP
 - IVR
 
+cips:
+- Applied Mathematics
+- Financial Mathematics
+
 categories:
 - Applied Mathematics
 - Financial Mathematics

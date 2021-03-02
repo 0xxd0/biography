@@ -34,7 +34,7 @@ authors:
 tags:
 - Sinusitis
 
-categories:
+cips:
 - Medicine
 - Medicine, Other
 ---

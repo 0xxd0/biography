@@ -37,7 +37,8 @@ tags:
 
 categories:
 - Computer Science
-- NC. Networking and Communication
+- IAS. Information Assurance and Security
+- Cryptography
 ---
 
 HTTP 协议 (Hypertext Transfer Protocol) 作为 C/S 模式下常用的协议，主要用于传输超文本，本质上 HTTP 为明文无任何安全保证，主要存在三大风险:
