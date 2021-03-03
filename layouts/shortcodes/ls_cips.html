@@ -1,0 +1,6 @@
+<ul class="list-unstyled">
+  {{ range site.Taxonomies.cips }}
+  <i class="fas fa-hashtag"></i>
+  <a href="{{.Page.RelPermalink}}"> {{.Page.Params.code}} {{.Page.Title}}</a>
+  {{ end }}
+</ul>

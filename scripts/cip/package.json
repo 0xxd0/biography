@@ -1,0 +1,16 @@
+{
+  "name": "cip",
+  "version": "1.0.0",
+  "description": "cip tools",
+  "main": "createTemplate.js",
+  "scripts": {
+    "create": "node createTemplate.js",
+    "update": "node updatePage.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "js-yaml": "^4.0.0"
+  }
+}

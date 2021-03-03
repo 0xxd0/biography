@@ -38,6 +38,8 @@ tags:
 categories:
 - Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
 
+cip_code: '31.9999'
+
 cips:
 - Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
 
