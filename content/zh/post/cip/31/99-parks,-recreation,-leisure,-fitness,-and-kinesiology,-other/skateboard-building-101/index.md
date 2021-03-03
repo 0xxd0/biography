@@ -1,55 +1,32 @@
 ---
 title: 滑板选配 101
-
 subtitle: 深入了解滑板的各种部件以及如何选择、组装与保养
-
-# Summary for listings and search engines
 summary: 深入了解滑板的各种部件以及如何选择、组装与保养
-
-# Link this post with a project
 projects: []
-
-# Date published
-date: 2020-09-09T00:00:00Z
-
-# Date updated
-lastmod: 2020-09-09T00:00:00Z
-
-# Is this an unpublished draft?
+date: 2020-09-09T00:00:00.000Z
+lastmod: 2020-09-09T00:00:00.000Z
 draft: false
-
-# Show this page in the Featured widget?
 featured: false
-
-# Featured image
-# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
   caption: ''
-  focal_point: ""
+  focal_point: ''
   placement: 2
   preview_only: false
-
 authors:
 - admin
-
 tags:
 - Skateboard
-
 categories:
 - Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
-
 cip_code: '31.9999'
-
 cips:
-- Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
-
+- 31.99) Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
+- 31.9999) Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
 links:
-  - icon_pack: fab
-    icon: instagram
-    name: Instagram
-    url: 'https://www.instagram.com/p/CLgpzQlM2HM/'
-
-# {{< ins CLgpzQlM2HM 7 >}}
+- icon_pack: fab
+  icon: instagram
+  name: Instagram
+  url: https://www.instagram.com/p/CLgpzQlM2HM/
 ---
 
 ## 序

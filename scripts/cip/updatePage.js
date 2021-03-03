@@ -21,8 +21,9 @@ traverse('../../content/zh', (err, files) => {
     if (!fs.statSync(file).isDirectory(), path.extname(file) == '.md') {
       var fileData = fs.readFileSync(file, 'utf8')
       let regex = '---([^]*?)---'
-      var yamlObject = yaml.load(fileData.match(regex)[1])
-
+      let replacable = fileData.match(regex)[1]
+      var yamlObject = yaml.load(replacable)
+      
       let code = yamlObject['cip_code']
       if (code && code.length == 7) {
         var level3 = metaDataEN[code]
@@ -31,13 +32,12 @@ traverse('../../content/zh', (err, files) => {
         let cips = [level2.code + ') ' + level2.title, level3.code + ') ' + level3.title]
         yamlObject['cips'] = cips
 
-        let modified = yaml.dump(yamlObject, { 
+        let dumped = yaml.dump(yamlObject, { 
           noArrayIndent: true
         })
         
-        fileData.replace(regex, modified)
-
-        fs.writeFileSync(file, fileData)
+        let modifiedData = fileData.replace(replacable, dumped)
+        fs.writeFileSync(file, modifiedData)
       }
     }
   })

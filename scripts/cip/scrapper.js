@@ -17,7 +17,7 @@ function scrapMetadataForEN() {
 
 		return {
 			"code": code,
-			"title": title,
+			"title": truncatedTitle,
 			"permalink": permalink
 		}
 	})
