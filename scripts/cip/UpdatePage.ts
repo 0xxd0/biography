@@ -1,15 +1,14 @@
-const fs    = require('fs')
-const path  = require('path')
-const glob  = require('glob')
-const yaml  = require('js-yaml')
-const _     = require('./string')
+import * as fs from 'fs'
+import * as path from 'path'
+import * as yaml from 'js-yaml'
+import * as glob from 'glob'
 
-var metaDataIndex = require('./metaDataIndex.json')
-var metaDataEN = require('./metaDataEN.json')
-var metaDataCN = require('./metaDataCN.json')
+var metaDataIndex = require('../res/metaDataIndex.json')
+var metaDataEN = require('../res/metaDataEN.json')
+var metaDataCN = require('../res/metaDataCN.json')
 
-var traverse = (path, callback) => {
-  glob(path + '/**/*', callback);
+function traverse(path: string, callback: (err: Error | null, matches: string[]) => void) {
+  glob.glob(path + '/**/*', callback)
 }
 
 traverse('../../content/zh', (err, files) => {
@@ -18,11 +17,11 @@ traverse('../../content/zh', (err, files) => {
   }
 
   Array.prototype.forEach.call(files, (file, _) => {
-    if (!fs.statSync(file).isDirectory(), path.extname(file) == '.md') {
+    if (!fs.statSync(file).isDirectory() && path.extname(file) == '.md') {
       var fileData = fs.readFileSync(file, 'utf8')
-      let regex = '---([^]*?)---'
-      let replacable = fileData.match(regex)[1]
-      var yamlObject = yaml.load(replacable)
+      let regex: string = '---([^]*?)---'
+      let replacable = fileData.match(regex)![1]
+      var yamlObject = yaml.load(replacable) as any
       
       let code = yamlObject['cip_code']
       if (code && code.length == 7) {
@@ -35,14 +34,13 @@ traverse('../../content/zh', (err, files) => {
         let dumped = yaml.dump(yamlObject, { 
           noArrayIndent: true
         })
-        
+
         let modifiedData = fileData.replace(replacable, dumped)
         fs.writeFileSync(file, modifiedData)
       }
     }
   })
 })
-
 
 // Array.prototype.forEach.call(metaDataIndex, (i, _) => {
 //   if (i.length > 5) {

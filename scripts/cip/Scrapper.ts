@@ -2,7 +2,7 @@
 let rootId = "tree_ul_section_0"
 
 function scrapMetadataForEN() {
-	let objects = Array.prototype.map.call(document.getElementById(rootId).getElementsByTagName("li"), (element, index) => {
+	let objects = Array.prototype.map.call(document.getElementById(rootId)!.getElementsByTagName("li"), (element, index) => {
 		let e = element.getElementsByTagName("a")[0]
 		let href = e.href
 		let text = e.text
@@ -22,7 +22,7 @@ function scrapMetadataForEN() {
 		}
 	})
 
-	var index = {}
+	var index = {} as any
 	Array.prototype.forEach.call(objects, (element, _) => {
 		let code = element["code"]
 		index[code] = element
@@ -33,7 +33,7 @@ function scrapMetadataForEN() {
 
 // from https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=56
 function scrapMetadataForCN() {
-	let objects = Array.prototype.map.call(document.getElementById(rootId).getElementsByTagName("li"), (element, index) => {
+	let objects = Array.prototype.map.call(document.getElementById(rootId)!.getElementsByTagName("li"), (element, index) => {
 		let e = element.getElementsByTagName("a")[0]
 
 		let href = e.href
@@ -54,7 +54,7 @@ function scrapMetadataForCN() {
 		}
 	})
 
-	var index = {}
+	var index = {} as any
 	Array.prototype.forEach.call(objects, (element, _) => {
 		let code = element["code"]
 		index[code] = element
@@ -64,7 +64,7 @@ function scrapMetadataForCN() {
 }
 
 function scrapIndex() {
-	let objects = Array.prototype.map.call(document.getElementById(rootId).getElementsByTagName("li"), (element, index) => {
+	let objects = Array.prototype.map.call(document.getElementById(rootId)!.getElementsByTagName("li"), (element, index) => {
 		return element.getElementsByTagName("a")[0].text.split(") ")[0]
 	})
 	return objects
@@ -72,7 +72,7 @@ function scrapIndex() {
 
 function expandAll() {
 	let rootId = "tree_ul_section_0"
-	Array.prototype.forEach.call(document.getElementById(rootId).getElementsByTagName("li"), (element, index) => {
+	Array.prototype.forEach.call(document.getElementById(rootId)!.getElementsByTagName("li"), (element, index) => {
 		let img = element.getElementsByTagName("img")[0]
 		if (img) { img.click() }
 	})

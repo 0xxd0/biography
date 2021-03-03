@@ -9,4 +9,8 @@ jsconfig.json
 # macOS
 .DS_Store
 
-node_modules
+# Typescript
+node_modules/
+.node_modules/
+built/*
+*/**/.tsc/*.js
