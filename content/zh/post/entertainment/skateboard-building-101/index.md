@@ -20,8 +20,8 @@ categories:
 - Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
 cip_code: '31.9999'
 cips:
-- 31.99) 公园，娱乐，休闲，健身和运动机能学，其他
-- 31.9999) 公园，娱乐，休闲，健身和运动机能学，其他
+- 31.99) Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
+- 31.9999) Parks, Recreation, Leisure, Fitness, and Kinesiology, Other
 links:
 - icon_pack: fab
   icon: instagram

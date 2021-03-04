@@ -14,8 +14,8 @@ categories:
 cip_code: '45.0601'
 weight: 1
 cips:
-- 45.06) 经济学
-- 45.0601) 经济学，综合
+- 45.06) Economics
+- 45.0601) Economics, General
 ---
 
 ### Overview

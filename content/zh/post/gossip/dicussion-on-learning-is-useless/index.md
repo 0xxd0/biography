@@ -18,8 +18,8 @@ tags:
 - Essay
 cip_code: '45.0101'
 cips:
-- 45.01) 社会科学，综合
-- 45.0101) 社会科学，综合
+- 45.01) Social Sciences, General
+- 45.0101) Social Sciences, General
 ---
 
 

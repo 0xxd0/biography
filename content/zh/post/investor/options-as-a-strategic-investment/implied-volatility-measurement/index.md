@@ -1,37 +1,24 @@
 ---
 title: 如何衡量隐含波动率
 linkTitle: Implied Volatility Measurement
-
 summary: 隐含波动率衡量方法 Implied Volatility Measurement
-
-# Link this post with a project
 type: book
-
-# Date published
-date: 2020-07-28T15:44:16Z
-
-# Date updated
-lastmod: 2020-07-28T15:44:16Z
-
-# Is this an unpublished draft?
+date: 2020-07-28T15:44:16.000Z
+lastmod: 2020-07-28T15:44:16.000Z
 draft: false
-
 authors:
 - admin
-
 tags:
 - Options
 - Implied Volatility
 - IV
 - IVP
 - IVR
-
 cip_code: '27.0301'
 cips:
-- Applied Mathematics
-- Financial Mathematics
-
-categories:
+- 27.03) Applied Mathematics
+- 27.0301) Applied Mathematics, General
+categories: null
 weight: 2
 ---
 

@@ -15,8 +15,8 @@ categories:
 cip_code: '52.0801'
 weight: 2
 cips:
-- 52.08) 财务和财务管理服务
-- 52.0801) 财务，一般
+- 52.08) Finance and Financial Management Services
+- 52.0801) Finance, General
 ---
 
 {{< figure src="https://www.tencent.com/img/index/tencent_logo.png" >}}

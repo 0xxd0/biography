@@ -1,14 +1,14 @@
 import { cip } from './codeTransform'
-import { traverse } from './fsExtension'
+import { Page } from './page'
 
 function transform() {
-  traverse('../../content/zh', (err, files) => {
+  Page.find('../content/zh', (err, pages) => {
     if (err) {
       console.log('Error:', err)
     }
   
-    Array.prototype.forEach.call(files, (file, _) => {
-      (new cip.Code).transformFor(file)
+    Array.prototype.forEach.call(pages, (page, _) => {
+      (new cip.Code).transform(page.url)
     })
   })
 }

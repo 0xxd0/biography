@@ -16,8 +16,8 @@ categories:
 - Economics
 - Economics, Other
 cips:
-- 45.06) 经济学
-- 45.0601) 经济学，综合
+- 45.06) Economics
+- 45.0601) Economics, General
 ---
 
 {{< figure src="https://oyc.yale.edu/sites/default/files/polak_1.jpg" title="Game Theory" >}}

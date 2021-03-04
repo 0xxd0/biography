@@ -19,8 +19,8 @@ tags:
 cip_code: '26.0503'
 categories: null
 cips:
-- 26.05) 微生物科学与免疫学
-- 26.0503) 医学微生物学和细菌学
+- 26.05) Microbiological Sciences and Immunology
+- 26.0503) Medical Microbiology and Bacteriology
 ---
 
 ## 序

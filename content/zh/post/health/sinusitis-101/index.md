@@ -18,8 +18,8 @@ tags:
 - Sinusitis
 cip_code: '51.1201'
 cips:
-- 51.12) 医学
-- 51.1201) 医学
+- 51.12) Medicine
+- 51.1201) Medicine
 ---
 
 ## 鼻炎
