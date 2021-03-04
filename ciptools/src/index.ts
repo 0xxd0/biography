@@ -5,7 +5,7 @@ function transform() {
     if (err) {
       console.log('Error:', err)
     }
-    pages?.forEach(page => page.open().adjustFrontMatter().save())
+    pages?.forEach(page => page.open().format().save())
   })
 }
 

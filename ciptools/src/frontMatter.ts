@@ -23,9 +23,9 @@ export class FrontMatter {
   }
 
   /**
-   * cipTransform
+   * formatCIP
    */
-  public cipTransform() {
+  public formatCIP() {
     let code = this.pairs!['cip_code']
       
     if (code && code.length == 7) {

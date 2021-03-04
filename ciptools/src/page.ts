@@ -22,9 +22,9 @@ export class Page {
     })
   }
 
-  public adjustFrontMatter(): Page {
+  public format(): Page {
     let fm = new FrontMatter(this.modifiedData!)
-    fm.cipTransform()
+    fm.formatCIP()
     let dumped = fm.dump()
     this.modifiedData = this.rawValue!.replace(fm.rawValue!, dumped)
     return this
