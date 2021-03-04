@@ -18,8 +18,7 @@ authors:
 tags:
 - HTTPS
 categories:
-- IAS. Information Assurance and Security
-- Cryptography
+- NC. Networking and Communication
 cips:
 - 11.07) Computer Science
 - 11.0701) Computer Science

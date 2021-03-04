@@ -1,5 +1,6 @@
 {{ $items_type := (.Get "page_type") | default "post" }}
 {{ $category := (.Get "category") }}
+{{ $cip := (.Get "cip") }}
 {{ $tag := (.Get "tag") }}
 {{ $items_count := (.Get "count") | default 65535 }}
 {{ $items_sort := (.Get "order") | default "desc" }}
@@ -21,6 +22,10 @@
 {{ end }}
 {{ if $category }}
   {{ $archive_page = site.GetPage (printf "categories/%s" (urlize $category)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $cip }}
+  {{ $archive_page = site.GetPage (printf "cips/%s" (urlize $cip)) }}
   {{ $query = $query | intersect $archive_page.Pages }}
 {{ end }}
 {{ if $publication_type }}
