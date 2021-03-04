@@ -1,6 +1,6 @@
 import { Page } from './page'
 
-function transform() {
+function format() {
   Page.find('../content/zh', (err, pages) => {
     if (err) {
       console.log('Error:', err)
@@ -9,4 +9,4 @@ function transform() {
   })
 }
 
-transform()
+format()

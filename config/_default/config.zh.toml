@@ -43,8 +43,9 @@ ignoreErrors = ["error-remote-getjson"]
   # Workaround Hugo publishing taxonomy URLs as plurals - consistently use singular across Academic.
   tags = "/tag/:slug/"
   categories = "/category/:slug/"
+  cips = "/cip/:slug/"
   publication_types = "/publication-type/:slug/"
-  # post = "/:year/:month/:day/:slug"
+  post = "/:year/:month/:day/:slug"
 
 [outputs]
   home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]

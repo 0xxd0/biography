@@ -4,7 +4,7 @@
   "description": "cip tools",
   "main": "createTemplate.js",
   "scripts": {
-    "transform": "node .tsc/index.js"
+    "format": "node .tsc/index.js"
   },
   "author": "",
   "license": "ISC",
