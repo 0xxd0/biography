@@ -1,4 +1,3 @@
-import { cip } from './codeTransform'
 import { Page } from './page'
 
 function transform() {
@@ -6,10 +5,7 @@ function transform() {
     if (err) {
       console.log('Error:', err)
     }
-  
-    Array.prototype.forEach.call(pages, (page, _) => {
-      (new cip.Code).transform(page.url)
-    })
+    pages?.forEach(page => page.open().adjustFrontMatter().save())
   })
 }
 

@@ -6,7 +6,7 @@ export function traverse(path: string, callback: (err: Error | null, matches: st
   glob(path + '/**/*', callback)
 }
 
-declare global{
+declare global {
   interface String {
     isMarkdwonFile(): boolean;
     isDirectory(): boolean;
