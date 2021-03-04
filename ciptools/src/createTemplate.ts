@@ -1,10 +1,9 @@
-const fs = require('fs')
-const path = require("path")
-const _ = require('./string')
+import * as fs from 'fs'
+import * as path from 'path'
 
-var metaDataIndex = require('./metaDataIndex.json')
-var metaDataEN = require('./metaDataEN.json')
-var metaDataCN = require('./metaDataCN.json')
+var metaIndex = require('../res/zh-cn/index.json')
+var metaMap = require('../res/en/metaMap.json')
+var localizedMetaMap = require('../res/en/metaMap.json')
 
 var cipTemplate = fs.readFileSync('../../archetypes/cip.md', 'utf8')
 
@@ -13,21 +12,21 @@ let link = "{ %link% }"
 let code = "{ %code% }"
 let weight = "{ %weight% }"
 
-Array.prototype.forEach.call(metaDataIndex, (i, _) => {
+Array.prototype.forEach.call(metaIndex, (i: string, _) => {
   if (i.length > 5) {
     return
   }
 
-  let metaEN = metaDataEN[i]
-  let metaCN = metaDataCN[i]
+  let meta = metaMap[i]
+  let localizedMeta = localizedMetaMap[i]
 
-  let localizedTitle = metaEN.title
+  let localizedTitle = meta.title
 
   let result = cipTemplate
     .replaceAll(title, localizedTitle)
     .replaceAll(code, i)
-    .replaceAll(link, metaEN.permalink)
-    .replaceAll(weight, parseFloat(i) * 10000)
+    .replaceAll(link, meta.permalink)
+    .replaceAll(weight, (parseFloat(i) * 10000).toString())
 
   let name = i + " " + localizedTitle
   let filename = name.substring(0, name.length - 1)
