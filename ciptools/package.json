@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "glob": "^7.1.6",
-    "js-yaml": "^4.0.0"
+    "js-yaml": "^4.0.0",
+    "rxjs": "^6.6.6"
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",

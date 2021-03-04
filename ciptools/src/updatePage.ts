@@ -1,25 +1,20 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as yaml from 'js-yaml'
-import * as glob from 'glob'
+import { traverse } from './fsExtension'
 
-var metaIndex = require('../res/en/index.json')
-var metaMap = require('../res/zh-cn/metaMap.json')
+var metaIndex = require('../res/zh-cn/index.json')
+var metaMap = require('../res/en/metaMap.json')
 var localizedMetaMap = require('../res/en/metaMap.json')
 
-function traverse(path: string, callback: (err: Error | null, matches: string[]) => void) {
-  glob.glob(path + '/**/*', callback)
-}
 
-traverse('../../content/zh', (err, files) => {
-  if (err) {
-    console.log('Error', err)
-  }
+export class Cip {
 
-  Array.prototype.forEach.call(files, (file, _) => {
-    if (!fs.statSync(file).isDirectory() && path.extname(file) == '.md') {
+  applySync(file: string) {
+    if (file.isDirectory() && file.isMarkdwonFile()) {
       var fileData = fs.readFileSync(file, 'utf8')
       let regex: string = '---\n([^]*?)---'
+      console.log(file)
       let replacable = fileData.match(regex)![1]
       var yamlObject = yaml.load(replacable) as any
       
@@ -40,5 +35,15 @@ traverse('../../content/zh', (err, files) => {
         fs.writeFileSync(file, modifiedData)
       }
     }
+  }
+}
+
+traverse('../../content/zh', (err, files) => {
+  if (err) {
+    console.log('Error:', err)
+  }
+
+  Array.prototype.forEach.call(files, (file, _) => {
+    (new Cip).applySync(file)
   })
 })
