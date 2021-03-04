@@ -1,27 +1,15 @@
 ---
 title: The Classification of Instructional Programs
-
 linkTitle: 主页
-
-# Date published
-date: 2014-12-15T10:31:29Z
-# Date updated
-lastmod: 2014-12-15T10:31:29Z
-
-# Is this an unpublished draft?
+date: 2014-12-15T10:31:29.000Z
+lastmod: 2014-12-15T10:31:29.000Z
 draft: false
-
 type: book
-
-# Show this page in the Featured widget?
 featured: false
-
 authors:
 - admin
-
 tags:
 - CIP
-
 categories:
 - The Classification of Instructional Programs
 ---

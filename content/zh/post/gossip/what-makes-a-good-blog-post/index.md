@@ -1,39 +1,21 @@
 ---
 title: 如何写出一篇好博文
 subtitle: 善用写作工具以及表现手法
-
-# Summary for listings and search engines
 summary: 善用写作工具以及表现手法
-
-# Link this post with a project
 projects: []
-
-# Date published
-date: 2019-09-11T00:00:00Z
-
-# Date updated
-lastmod: 2019-09-11T00:00:00Z
-
-# Is this an unpublished draft?
+date: 2019-09-11T00:00:00.000Z
+lastmod: 2019-09-11T00:00:00.000Z
 draft: true
-
-# Show this page in the Featured widget?
 featured: true
-
-# Featured image
-# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
   caption: ''
-  focal_point: ""
+  focal_point: ''
   placement: 1
   preview_only: false
-
 authors:
 - admin
-
 tags:
 - Essay
-
 categories:
 - Gossip
 ---

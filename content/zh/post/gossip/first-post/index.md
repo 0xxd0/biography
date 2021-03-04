@@ -1,39 +1,21 @@
 ---
 title: 创篇号
 subtitle: 学而不思则罔，思而不学则殆
-
-# Summary for listings and search engines
 summary: 学而不思则罔，思而不学则殆
-
-# Link this post with a project
 projects: []
-
-# Date published
-date: 2014-06-11T00:00:00Z
-
-# Date updated
-lastmod: 2014-6-12T00:00:00Z
-
-# Is this an unpublished draft?
+date: 2014-06-11T00:00:00.000Z
+lastmod: 2014-06-12T00:00:00.000Z
 draft: false
-
-# Show this page in the Featured widget?
 featured: false
-
-# Featured image
-# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
   caption: ''
-  focal_point: ""
+  focal_point: ''
   placement: 2
   preview_only: false
-
 authors:
 - admin
-
 tags:
 - Essay
-
 categories:
 - Gossip
 ---

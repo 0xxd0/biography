@@ -1,107 +1,62 @@
 ---
 title: Google Developer Days China 2018 参会记录
-
 event: Google Developer Days China 2018
 event_url: https://www.google.cn/intl/en/events/developerdays2018/
-
-location: 'The Expo Center'
+location: The Expo Center
 address:
   street: ''
   city: Shanghai
   region: ''
   postcode: ''
   country: China
-
 summary: 了解 Google 创新技术，与 Google 全球产品专家面对面，亲身体验 Google 产品
-
-abstract: Google 开发者大会 (Google Developer Days，简称 GDD) 是展示 Google 最新开发者产品和平台的全球盛会，旨在帮助你快速开发优质应用，发展和留住活跃用户群，充分利用各种工具获得更多收益。2018 Google 开发者大会将于 9 月 20 日和 21 日于上海举办，主题将涵盖机器学习、ARCore、Android、Play、WearOS、无障碍、移动网络、Firebase、Assistant、物联网、云服务、Flutter、广告、设计，等等。我们非常高兴与你分享我们关于创新技术的想法，鼓励广大开发者着手构建下一个精彩的移动应用或网络体验。
-
-# Featured image
-# To use, place an image named `featured.jpg/png` in your page's folder.
-# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
-# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-# Set `preview_only` to `true` to just use the image for thumbnails.
+abstract: >-
+  Google 开发者大会 (Google Developer Days，简称 GDD) 是展示 Google
+  最新开发者产品和平台的全球盛会，旨在帮助你快速开发优质应用，发展和留住活跃用户群，充分利用各种工具获得更多收益。2018 Google 开发者大会将于 9
+  月 20 日和 21
+  日于上海举办，主题将涵盖机器学习、ARCore、Android、Play、WearOS、无障碍、移动网络、Firebase、Assistant、物联网、云服务、Flutter、广告、设计，等等。我们非常高兴与你分享我们关于创新技术的想法，鼓励广大开发者着手构建下一个精彩的移动应用或网络体验。
 image:
-  caption: 'Google Developer Days China 2018'
-  focal_point: "Smart"
+  caption: Google Developer Days China 2018
+  focal_point: Smart
   placement: 1
   preview_only: false
-
 links:
 - icon: google
   icon_pack: fab
   name: Agenda
   url: https://www.google.cn/intl/en/events/developerdays2018/agenda/
-
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
-
-# Markdown Slides (optional).
-#   Associate this talk with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-slides: ""
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
+url_code: ''
+url_pdf: ''
+url_slides: ''
+url_video: ''
+slides: ''
 projects: []
-
-tags: 
+tags:
 - Tensorflow
 - Firebase
 - Flutter
 - ARCore
 - GoogleIO
-
 categories:
 - Computer Science
 - Developer Conference
-
-# Talk start and end times.
-#   End time can optionally be hidden by prefixing the line with `#`.
-date: "2018-09-20T09:00:00Z"
-date_end: "2018-09-21T18:00:00Z"
+date: '2018-09-20T09:00:00Z'
+date_end: '2018-09-21T18:00:00Z'
 all_day: true
-
-# Schedule page publish date (NOT talk date).
-publishDate: "2018-09-22T04:19:00Z"
-
-# Date updated
-lastmod: "2021-01-04T00:00:00Z"
-
-# Is this an unpublished draft?
+publishDate: '2018-09-22T04:19:00Z'
+lastmod: '2021-01-04T00:00:00Z'
 draft: false
-
-authors: [admin]
-
-# Is this a featured talk? (true/false)
-# Show this page in the Featured widget?
+authors:
+- admin
 featured: false
-
- # Show estimated reading time?
-reading_time: true 
-
-# Show social sharing links?
-share: false 
-
-# Show author profile? 
-profile: true  
-
-# Allow visitors to comment? Supported by the Page, Post, and Docs content types.
-commentable: false  
-
-# Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
+reading_time: true
+share: false
+profile: true
+commentable: false
 editable: false
-
 gallery_item:
 - album: album-tensorflow
-  image: anna-goldie.jpg 
+  image: anna-goldie.jpg
   caption: Google AI 妹子工程师上台对自家 TensorFlow 进行了一波带有东北腔的美式中文吹爆
 - album: album-tensorflow
   image: opensource.jpg
@@ -112,7 +67,6 @@ gallery_item:
 - album: album-tensorflow
   image: lstm-networks.jpg
   caption: 中国海洋大学的科研人员借助 TensorFlow，通过使用 LSTM NetWorks 对 SST 进行可靠的预测，以达到分析全球气候状况的目的
-
 - album: youtube-and-flutter
   image: youtube-and-flutter.jpg
   caption: Youtube and Flutter
@@ -122,7 +76,6 @@ gallery_item:
 - album: youtube-and-flutter
   image: flutter-demo.jpg
   caption: Flutter 展台 Demo 应用
-
 - album: flutter
   image: rendering-performance.jpg
   caption: Flutter 渲染性能
@@ -138,7 +91,6 @@ gallery_item:
 - album: flutter
   image: flutter-render-trees.jpg
   caption: Flutter 渲染树
-
 - album: flutter-graphics
   image: what-is-flutter.jpg
   caption: Flutter 是什么
