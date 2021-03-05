@@ -1,7 +1,7 @@
 {
-  "name": "cip",
+  "name": "tools",
   "version": "1.0.0",
-  "description": "cip tools",
+  "description": "pages tools",
   "main": "createTemplate.js",
   "scripts": {
     "format": "node .tsc/index.js"
