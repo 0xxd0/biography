@@ -3,7 +3,7 @@ title: "Lecture\_1 - Introduction Five First\_Lessons"
 linktitle: "Lecture\_1 - Introduction"
 type: book
 date: 2019-01-01T10:31:29.000Z
-draft: true
+draft: false
 authors:
 - admin
 tags:

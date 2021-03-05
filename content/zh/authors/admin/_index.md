@@ -31,10 +31,13 @@ social:
 - icon: discord
   icon_pack: fab
   link: null
-- icon: steam
+- icon: playstation
   icon_pack: fab
   link: null
 - icon: xbox
+  icon_pack: fab
+  link: null
+- icon: steam
   icon_pack: fab
   link: null
 - icon: instagram

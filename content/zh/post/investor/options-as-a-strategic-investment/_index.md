@@ -7,7 +7,7 @@ type: book
 weight: 1
 authors:
 - admin
-draft: true
+draft: false
 tags:
 - Options
 - Implied Volatility

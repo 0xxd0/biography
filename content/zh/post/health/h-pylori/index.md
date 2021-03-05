@@ -3,8 +3,8 @@ title: Helicobacter Pylori
 subtitle: H. pylori
 summary: H. pylori
 projects: []
-date: 2017-05-08T00:00:00.000Z
-lastmod: 2017-05-08T00:00:00.000Z
+date: 2017-09-01T00:00:00.000Z
+lastmod: 2017-09-01T00:00:00.000Z
 draft: true
 featured: false
 image:

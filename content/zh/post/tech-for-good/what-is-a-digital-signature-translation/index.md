@@ -23,6 +23,11 @@ categories:
 cips:
 - 11.07) Computer Science
 - 11.0701) Computer Science
+links:
+- icon_pack: fas
+  icon: external-link-alt
+  name: Original Post
+  url: http://www.youdzone.com/signature.html
 ---
 
 ## 前言

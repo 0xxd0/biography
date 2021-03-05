@@ -1,10 +1,10 @@
 ---
-title: 深入了解 HTTPS Protocol
-subtitle: HTTPS 协议详解
-summary: HTTPS 协议详解
+title: 深入了解 HTTPS
+subtitle: HTTPS 详解
+summary: HTTPS 详解
 projects: []
-date: 2017-05-31T00:00:00.000Z
-lastmod: 2017-05-31T00:00:00.000Z
+date: 2017-05-13T00:00:00.000Z
+lastmod: 2017-05-13T00:00:00.000Z
 draft: false
 cip_code: '11.0701'
 featured: false
@@ -22,6 +22,11 @@ categories:
 cips:
 - 11.07) Computer Science
 - 11.0701) Computer Science
+links:
+- icon_pack: far
+  icon: file-pdf
+  name: RFC 2660
+  url: https://tools.ietf.org/pdf/rfc2660.pdf
 ---
 
 HTTP 协议 (Hypertext Transfer Protocol) 作为 C/S 模式下常用的协议，主要用于传输超文本，本质上 HTTP 为明文无任何安全保证，主要存在三大风险:
