@@ -25,27 +25,25 @@ cips:
 links:
 - icon_pack: far
   icon: file-pdf
-  name: RFC 2660
-  url: https://tools.ietf.org/pdf/rfc2660.pdf
+  name: RFC 2818
+  url: https://tools.ietf.org/pdf/rfc2818.pdf
 ---
 
-HTTP 协议 (Hypertext Transfer Protocol) 作为 C/S 模式下常用的协议，主要用于传输超文本，本质上 HTTP 为明文无任何安全保证，主要存在三大风险:
+Hypertext Transfer Protocol Secure，超文本传输安全协议，又称 HTTP over TLS。是经由 HTTP 进行通信，并利用 SSL/TLS 来加密。HTTPS 主要目的是为了提供对服务器的身份认证，与传输过程中的数据完整性不被篡改，最早由网景（Netscape）在 1994 年提出，应用在网景领航员浏览器中。
 
-1. 被窃听的风险，第三方可以截获并查看你的内容
-2. 被篡改的危险，第三方可以截获并修改你的内容
-3. 被冒充的风险，第三方可以伪装成通信方与你通信
+HTTP 在作数据传输协议使用时，由于是明文传输无任何安全保证，会存在内容被窃听的问题；由于没有身份认证机制，通信过程中会面临中间人攻击，例如数据被篡改、服务器身份伪装等。正因为 HTTP 存在这些风险问题才诞生了 HTTPS。
 
-HTTP 因为存在以上三大安全风险，才诞生了 HTTPS，HTTPS 会涉及到很多领域比如 SSL/TLS、密码学、公钥与私钥、加密与认证、数字证书、数字签名等。要讲清楚 HTTPS，首先需要了解什么是数字签名。
+HTTPS 本质上是一个复合协议，由 HTTP、TSL/SSL、TCP 协同工作，因此会涉及到较多领域的内容比如密码学、公钥与私钥、加密与认证、数字证书、数字签名等。
 
-## 数字签名是什么
+此外 HTTPS 可能会与 [RFC 2660](https://tools.ietf.org/pdf/rfc2660.pdf) 中的安全超文本传输协议 S-HTTP 相混淆。两者都为 HTTP 安全传输的实现，S-HTTP 为应用层协议，主要对传输内容加密；HTTPS 的核心为 SSL/TSL，SSL/TSL 协议位于传输层与应用层之间，确保整个通信过程都是安全的。
 
-HTTPS 的通信过程中会涉及到加密、解密与认证的概念，所以首先需要了解什么是数字签名，Bob 的故事可以很好的帮助我们理解签名，从以下这篇文章进一步了解。
+## HTTPS 通信流程
 
-{{< cite page="what-is-a-digital-signature-translation" view="3" >}}
+如上文所述，HTTPS 是对 HTTP 的扩展，由三部分组成，通信流程可以简化为：
 
-## HTTPS 的通信过程
-
-通过上文的 Bob 的故事，在对数字签名有了个基本的概念之后，进一步了解 HTTPS 的设计逻辑。HTTPS 是基于基本的加密、解密、认证等概念的一个安全通信的过程。HTTPS 由 HTTP 协议和 SSL/TLS 协议组成，HTTP 负责传输，SSL/TLS 负责加密解密等安全处理，所以 HTTPS 的核心在 SSL/TLS 上面。整个 HTTPS 一共 7 次握手，3 次 TCP 握手，四次 SSL/TSL 握手。
+1. 通信双方通过三次握手建立 TCP 连接
+1. 通信双方通过四次握手建立 TLS 连接
+1. HTTP Client 向 Server 发送请求，Server 响应返回 Response
 
 ```mermaid
 sequenceDiagram
@@ -78,14 +76,20 @@ sequenceDiagram
   end
 ```
 
-### HTTPS 握手与单向认证
+### 建立 TCP 链接
 
-以浏览器和服务器的通信为例，通常 HTTPS 做单向认证，用于鉴别服务端的真伪，SSL/TSL 建立通信流程的如下：
+更多关于 TCP 的内容从以下这篇文章进一步了解。
 
-1. 浏览器发起往服务器的 SSL 端口一般为 443 发起请求，此次请求携带了支持的加密算法和哈希算法。
+{{< cite page="deep-dive-into-tcp" view="3" >}}
+
+### 建立 TLS 链接
+
+建立 TCP 链接后需要进行 TLS 握手，以浏览器和服务器的通信为例，通常 HTTPS 做单向认证，用于鉴别服务端的真伪，简化流程的如下：
+
+1. 浏览器向服务器的 TLS 端口（一般为 443）发起请求，此次请求携带了支持的加密算法和哈希算法。
 1. 服务器收到请求，选择浏览器支持的加密算法和哈希算法。 
 1. 服务器将数字证书返回给浏览器，这里的数字证书可以是向权威机构比如 CA 申请的，也可以是自签名证书。 
-1. 浏览器进入数字证书认证环节，这一部分是浏览器内置的 SSL/TLS 模块完成的。
+1. 浏览器进入数字证书认证环节，这一部分是浏览器内置的 TLS 模块完成的。
     - 首先浏览器会从系统内置的证书列表中索引，找到服务器下发证书对应的机构。
     - 以 macOS 为例，Safari、Edge 和 Chrome 会从系统的 Keychain Access 的根证书去索引，如果 Keychain 中有可疑证书是有漏洞可钻；而 Firefox 安全度更高，会在浏览器内置的证书中索引。 
     - 如果没有找到，此时就会提示用户该证书是不是由权威机构颁发，是不可信任的。
@@ -101,25 +105,14 @@ sequenceDiagram
 1. 服务器以 R 为密钥使用了对称加密算法加密网页内容并传输给浏览器。 
 1. 浏览器以 R 为密钥使用之前约定好的解密算法获取网页内容。
 
+整个过程主要为了认证服务端证书以及的公钥的合法性，因为非对称加密计算量较大，整个通信过程只会用到一次非对称加密算法，主要是用来保护传输客户端生成的 R 用于对称加密的随机数私钥。后续内容的加解密都是通过一开始约定好的对称加密算法进行的。
 
-前 5 步其实就是 HTTPS 的握手过程，这个过程主要是认证服务端证书以及的公钥的合法性。因非对称加密计算量较大，整个通信过程只会用到一次非对称加密算法，主要是用来保护传输客户端生成的 用于对称加密的随机数私钥。后续内容的加解密都是通过一开始约定好的对称加密算法进行的。
+更多关于 SSL/TLS 的详细内容从以下这篇文章进一步了解。
 
-## SSL/TSL 
-
-SSL/TLS 是 HTTPS 安全性的核心模块，TLS 的前身是 SSL，关系如下。
-
-| TSL | SSL |
-| - | - |
-| v1.0 | v3.1 | 
-| v1.1 | v3.2 | 
-| v1.2 | v3.3 |
-
-SSL/TLS 建立于 TCP 之上，为应用层协议。TLS 协议主要由两层构成，为 TLS Record Protocol 和 TLS Handshaking Protocols。前者基于一些可信任的协议如 TCP，为上层协议提供数据封装、压缩、加密等基本功能的支持，保证数据传输过程中的完整性和私密性，属于较低层的协议，而后者负责握手过程中的身份认证。
-
-更多关于 SSL/TSL 从以下这篇文章进一步了解。
-
-{{< cite page="deep-dive-into-ssl-tsl" view="3" >}}
+{{< cite page="deep-dive-into-ssl-tls" view="3" >}}
 
 ## 进一步了解
 
-1. [The Secure HyperText Transfer Protocol](https://tools.ietf.org/pdf/rfc2660.pdf)
+1. [HTTPS](https://en.wikipedia.org/wiki/HTTPS).
+1. [HTTP Over TLS](https://tools.ietf.org/pdf/rfc2818.pdf).
+1. [The Secure HyperText Transfer Protocol](https://tools.ietf.org/pdf/rfc2660.pdf).
