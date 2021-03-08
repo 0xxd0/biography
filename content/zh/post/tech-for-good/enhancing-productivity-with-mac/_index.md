@@ -1,5 +1,5 @@
 ---
-title: 使用 Mac 提高生产力 
+title: 使用 Mac 提高生产力
 summary: Enhancing Productivity with Mac
 linkTitle: 主页
 date: 2015-06-18T20:36:30.000Z

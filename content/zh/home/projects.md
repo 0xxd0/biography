@@ -19,6 +19,8 @@ design:
   view: 2
   flip_alt_rows: false
   background:
-    color: 'linear-gradient(165deg, #ffffff 0%,#ffffff 45%,#fc5f3c 45%,#ff55d3 90%, #ffffff 90%, #ffffff 100%)'
+    color: >-
+      linear-gradient(165deg, #ffffff 0%,#ffffff 45%,#fc5f3c 45%,#ff55d3 90%,
+      #ffffff 90%, #ffffff 100%)
     image: background.png
 ---
