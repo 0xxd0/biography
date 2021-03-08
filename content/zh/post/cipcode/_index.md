@@ -12,6 +12,11 @@ tags:
 - CIP
 categories:
 - The Classification of Instructional Programs
+links:
+- icon_pack: far
+  icon: link
+  name: Codes
+  url: https://nces.ed.gov/ipeds/cipcode/browse.aspx?y=56
 ---
 
 ## 关于
