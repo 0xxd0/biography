@@ -1,7 +1,7 @@
 ---
 title: 如何衡量隐含波动率
-linkTitle: Implied Volatility Measurement
 summary: 隐含波动率衡量方法 Implied Volatility Measurement
+linkTitle: Implied Volatility Measurement
 type: book
 date: 2020-07-28T15:44:16.000Z
 lastmod: 2020-07-28T15:44:16.000Z

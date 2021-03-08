@@ -1,0 +1,2 @@
+{{ $post_pages := where (where .Site.Pages "Type" "post") "Kind" "page" }}
+{{ return $post_pages }}

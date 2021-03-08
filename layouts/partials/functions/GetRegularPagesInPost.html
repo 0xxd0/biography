@@ -1,0 +1,4 @@
+{{ $GetBookSectionsRecursiveInPost := partial "functions/GetBookSectionsRecursiveInPost" . }}
+{{ $GetRegularPagesRecursiveInPost := partial "functions/GetRegularPagesRecursiveInPost" . }}
+{{ $sorted := sort ($GetBookSectionsRecursiveInPost | append $GetRegularPagesRecursiveInPost) "Date" "desc" }}
+{{ return $sorted }}

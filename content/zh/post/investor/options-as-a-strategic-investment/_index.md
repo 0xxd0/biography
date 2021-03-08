@@ -1,7 +1,7 @@
 ---
 title: 期权投资策略
 linktitle: 主页
-summary: 期权投资策略 OASI
+summary: Options as a Strategic Investment
 date: 2020-09-09T00:00:00.000Z
 type: book
 weight: 1

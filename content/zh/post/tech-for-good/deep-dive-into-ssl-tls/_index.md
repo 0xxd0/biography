@@ -1,11 +1,13 @@
 ---
 title: 深入了解 SSL/TLS Protocol
+linkTitle: TLS 概览
 subtitle: SSL/TLS 协议详解
 summary: SSL/TLS 协议详解
 projects: []
 date: 2017-05-09T00:00:00.000Z
 lastmod: 2017-05-09T00:00:00.000Z
 draft: false
+type: book
 cip_code: '11.0701'
 featured: false
 image:
@@ -53,6 +55,8 @@ links:
 
 ### TLS 的发展历史
 
+{{% figure src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/11/http-vs-https.png" width="660px" title="Image Source: [HOSTINGER](https://www.hostinger.com/tutorials/what-is-ssl-tls-https)" %}}
+
 TLS 的前身为安全套接字层 Secure Socket Layer。SSL 由网景 Netscape 在 1994 年设计并与同期提出的 HTTPS 一起应用在网景浏览器上，当时主要为 HTTPS 提供 SSL 层的加密服务，目的是为保护整条 Web 通信传输的链路安全，提供了 Client 以及 Server 的身份认证防止中间人伪装；提供加密数据防止被窃取；保证传输过程中数据完整性不被中间人篡改。
 
 随后 SSL 被 [ISOC](https://www.internetsociety.org) 组织成员 [IETF](https://www.ietf.org) 标准化，于 1999 年公布 TLS 1.0 标准文件 [RFC 2246](https://tools.ietf.org/pdf/rfc2246.pdf)，完整的时间线如下：
@@ -71,8 +75,8 @@ TLS 的前身为安全套接字层 Secure Socket Layer。SSL 由网景 Netscape 
 
 TLS 具体由两层构成：
 
-1. TLS 记录协议 TLS Record Protocol，建立在可靠的传输协议如 TCP 之上，为高层协议提供数据封装、压缩、加密等基本功能的支持，保证数据传输过程中的完整性和私密性，属于较低层的协议。
-1. TLS 握手协议 TLS Handshaking Protocols，建立在 TLS 记录协议之上，用于在实际的数据传输开始前，通讯双方进行身份认证、协商加密算法、交换加密密钥等。
+1. TLS 记录协议 The TLS Record Protocol，建立在可靠的传输协议如 TCP 之上，为高层协议提供数据封装、压缩、加密等基本功能的支持，保证数据传输过程中的完整性和私密性，属于较低层的协议。
+1. TLS 握手协议 The TLS Handshake Protocol，建立在 TLS 记录协议之上，用于在实际的数据传输开始前，通讯双方进行身份认证、协商加密算法、交换加密密钥等。
 
 TLS 协议的一大优势是与高层的应用层协议如 HTTP、SSH、Telnet 等无耦合，应用层协议能透明地运行在 TLS 之上，由 TLS 进行建立加密通道需要的协商和认证。应用层协议传送的数据在通过 TLS 协议层时都会被加密，从而保证通信的私密性。
 

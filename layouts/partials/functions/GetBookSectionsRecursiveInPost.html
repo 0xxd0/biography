@@ -1,0 +1,2 @@
+{{ $book_sections := where (where .Site.Pages "Type" "book") "Kind" "section" }}
+{{ return $book_sections }}

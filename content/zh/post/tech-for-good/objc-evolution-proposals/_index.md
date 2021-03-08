@@ -1,5 +1,6 @@
 ---
 title: The Objective-C Programming Language Evolution
+summary: That day, if swift had never been released..., would Objective-C be different?
 linkTitle: HomePage
 date: 2016-06-25T10:31:29.000Z
 lastmod: 2016-06-25T11:31:29.000Z
