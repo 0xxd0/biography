@@ -11,7 +11,7 @@ cip_code: '11.0701'
 authors:
 - admin
 tags:
-- Objective-C
+- Swift
 categories:
 - PL. Programming Languages
 - The Swift Programming Language
