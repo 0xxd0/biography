@@ -5,7 +5,7 @@ summary: About The Objective-C Programming Language Evolution
 date: 2016-06-25T10:31:29.000Z
 lastmod: 2016-06-25T11:31:29.000Z
 projects:
-- proj-objc-evolution
+- project-objc-evolution
 draft: false
 cip_code: '11.0701'
 featured: false

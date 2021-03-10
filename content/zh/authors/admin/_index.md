@@ -63,9 +63,5 @@ highlight_name: true
 ---
 
 ## 大家好！
+
 我目前在[腾讯](https://www.tencent.com/)担任客户端工程师一职。目前主攻的领域有苹果平台开发、游戏引擎二次开发，在移动应用架构、Swift、Objective-C、移动应用性能优化等方面有较多的经验，同时我也是 Swift 编程语言的积极布道者。
-
-<!-- 多媒体音视频 -->
-<!-- Metal -->
-
-<!-- {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}. -->
