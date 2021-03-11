@@ -1,8 +1,8 @@
 ---
-title: 操作系统
-linkTitle: 操作系统
-date: 2017-11-15T10:31:29.000Z
-lastmod: 2017-11-15T10:31:29.000Z
+title: 操作系统 2021 春
+linkTitle: OS2021spring
+date: 2021-02-22T10:31:29.000Z
+lastmod: 2021-02-22T10:31:29.000Z
 draft: false
 projects: 
 type: book
@@ -20,7 +20,7 @@ links:
   name: GitHub
   url: https://github.com/LearningOS/os-lectures
 - icon_pack: far
-  icon: file-pdf
+  icon: graduation-cap
   name: OS2021 spring
   url: http://os.cs.tsinghua.edu.cn/oscourse/OS2021spring
 cips:
