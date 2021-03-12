@@ -172,3 +172,4 @@ TLS 的证书是静态的，引入一种额外随机因素来保证协商出来�
 1. [The Transport Layer Security (TLS) Protocol Version 1.3](https://tools.ietf.org/pdf/rfc8446.pdf).
 1. [Datatracker The Transport Layer Security (TLS) Protocol Version 1.3](https://datatracker.ietf.org/doc/rfc8446/).
 1. [Transport Layer Security - Wikipedia](https://en.wikipedia.org/wiki/Transport_Layer_Security).
+1. [那些關於SSL/TLS的二三事(九) — SSL (HTTPS)Communication | Medium](https://medium.com/@clu1022/那些關於ssl-tls的二三事-九-ssl-communication-31a2a8a888a6).
