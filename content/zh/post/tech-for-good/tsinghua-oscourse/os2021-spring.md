@@ -4,7 +4,7 @@ linkTitle: OS2021spring
 date: 2021-02-22T10:31:29.000Z
 lastmod: 2021-02-22T10:31:29.000Z
 draft: false
-projects: 
+projects: null
 type: book
 featured: false
 cip_code: '11.0701'

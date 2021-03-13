@@ -11,3 +11,52 @@
   font-weight: 450;
   src: local('Adobe Clean Regular'), url('/fonts/AdobeClean-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: light;
+  font-weight: 300;
+  src: local('Product Sans Light'), url('/fonts/ProductSans-Light.woff2');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: light;
+  font-weight: 260;
+  src: local('Cascadia Code Light'), url('/fonts/CascadiaCode.ttf');
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  font-style: regular;
+  font-weight: 360;
+  src: local('Cascadia Code Regular'), url('/fonts/CascadiaCode.ttf');
+}
+
+@font-face {
+  font-family: 'Cascadia Mono';
+  font-style: light;
+  font-weight: 350;
+  src: local('Cascadia Mono'), url('/fonts/CascadiaMono.ttf');
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  font-style: light;
+  font-weight: 350;
+  src: local('FiraCode Light'), url('/fonts/FiraCode-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  font-style: light;
+  font-weight: 300;
+  src: local('Geomanist Light'), url('/fonts/hinted-Geomanist-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  font-style: regular;
+  font-weight: 450;
+  src: local('Geomanist Regular'), url('/fonts/hinted-Geomanist-Regular.ttf');
+}
