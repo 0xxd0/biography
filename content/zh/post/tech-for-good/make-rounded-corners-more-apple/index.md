@@ -23,10 +23,6 @@ cips:
 - 11.07) Computer Science
 - 11.0701) Computer Science
 links:
-- icon_pack: fab
-  icon: google
-  name: protobuf
-  url: https://developers.google.com/protocol-buffers
 gallery_item:
 - album: rounded-rect
   image: a-cornerradius-rounded.png
@@ -42,7 +38,7 @@ gallery_item:
   caption: CornerRadius - UIBezierPath
 ---
 
-## 前言
+## 如何画出 Rounded Rect
 
 在 Apple 平台上，通常在实现圆角时会使用 CoreAnimation 的 `CALayer.cornerRadius`：
 
@@ -71,31 +67,30 @@ view.layer.mask = shapeLayer
 
 ```swift
 override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view.
-    let width = view.bounds.width - 40
-    let bounds = CGRect(x: 0, y: 0, width: width, height: width)
-    let radius = width / 2 - 70
+  super.viewDidLoad()
+  let width = view.bounds.width - 40
+  let bounds = CGRect(x: 0, y: 0, width: width, height: width)
+  let radius = width / 2 - 70
 
-    let view1 = UIView(frame: bounds)
-    view1.backgroundColor = .pinkRed
+  let view1 = UIView(frame: bounds)
+  view1.backgroundColor = .pinkRed
 
-    let view2 = UIView(frame: bounds)
-    view2.backgroundColor = .pinkBlue
+  let view2 = UIView(frame: bounds)
+  view2.backgroundColor = .pinkBlue
 
-    view1.addSubview(view2)
-    view.addSubview(view1)
+  view1.addSubview(view2)
+  view.addSubview(view1)
 
-    let maskPath = UIBezierPath(roundedRect: bounds,
-                                byRoundingCorners: .allCorners,
-                                cornerRadii: .init(width: radius, height: radius))
-    let shapeLayer = CAShapeLayer()
-    shapeLayer.frame = bounds
-    shapeLayer.path = maskPath.cgPath
-    view2.layer.mask = shapeLayer
-        
-    view1.layer.cornerRadius = .init(radius)
-    view1.center = view.center
+  let maskPath = UIBezierPath(roundedRect: bounds,
+                              byRoundingCorners: .allCorners,
+                              cornerRadii: .init(width: radius, height: radius))
+  let shapeLayer = CAShapeLayer()
+  shapeLayer.frame = bounds
+  shapeLayer.path = maskPath.cgPath
+  view2.layer.mask = shapeLayer
+
+  view1.layer.cornerRadius = .init(radius)
+  view1.center = view.center
 }
 ```
 
@@ -107,23 +102,33 @@ override func viewDidLoad() {
 
 {{< cite page="rounded-corners-in-apple-ecosystem" view="3" >}}
 
-## CoreAnimation 的解决方案
+## Continuous Rounded Corners in CoreAnimation
 
-狡猾的苹果早起就在 CoreAnimation 中
-
-iOS 13 之前
+狡猾的苹果早期就在 CoreAnimation 中预留了 Private API `CALayer.continuousCorners` 来为他们自己提供 G1 连续的圆角，开发者们可以通过一个分类声明来使用这个属性：
 
 ```objc
-@interface CALayer (Private)
+@interface CALayer (Undocumented)
 
 @property (assign) BOOL continuousCorners;
 
 @end
 ```
 
+但相应的提审时就需要做一些混淆防止被拒。从 iOS 13 起，CoreAnimation 终于提供了 `CALayer.cornerCurve` 用于描述曲线的渲染方式，使用 `CALayerCornerCurve.continuous` 可以绘制出 G1 连续的圆角：
+
+```
+if #available(iOS 13.0, *) {
+    view.layer.cornerCurve = .continuous
+} else {
+    view.layer.continuousCorners = true
+}
+```
+
+## Squircle
 
 
 ## 进一步了解
 
-1. [protocolbuffers/protobuf: Protocol Buffers ](https://github.com/protocolbuffers/protobuf).
-1. [Protocol Buffers | Google Developers](https://developers.google.com/protocol-buffers).
+1. [Squircle - Wikipedia](https://en.wikipedia.org/wiki/Squircle)
+1. [rdar://44420870: CALayer.continuousCorners should be made public API to allow all apps to use platform-standard superlliptical corners on arbitrary views](http://www.openradar.me/44420870)
+1. [rdar://42040072: Make -[CALayer setContinuousCorners:] public](https://openradar.appspot.com/42040072)

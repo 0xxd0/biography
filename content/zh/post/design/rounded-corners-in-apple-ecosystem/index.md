@@ -24,4 +24,5 @@ cips:
 
 ## 进一步了解
 
+1. [Apple’s Icons Have That Shape for a Very Good Reason](https://hackernoon.com/apples-icons-have-that-shape-for-a-very-good-reason-720d4e7c8a14)
 1. [Rounded Corners in the Apple Ecosystem](https://medium.com/minimal-notes/rounded-corners-in-the-apple-ecosystem-1b3f45e18fcc).
