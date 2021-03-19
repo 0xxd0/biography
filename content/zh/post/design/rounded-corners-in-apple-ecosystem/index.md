@@ -26,3 +26,8 @@ cips:
 
 1. [Apple’s Icons Have That Shape for a Very Good Reason](https://hackernoon.com/apples-icons-have-that-shape-for-a-very-good-reason-720d4e7c8a14)
 1. [Rounded Corners in the Apple Ecosystem](https://medium.com/minimal-notes/rounded-corners-in-the-apple-ecosystem-1b3f45e18fcc).
+1. [Apple的那些从圆角到圆角](https://mp.weixin.qq.com/s/cZHMClYtlVs_ew1U5rLmQw).
+1. [曲线，一个更接近完美的答案 - oooooohmygosh_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av543258586).
+1. [(10 封私信 / 80 条消息) iOS 7 的圆角图标是怎样一个图形？ - 知乎](https://www.zhihu.com/question/21191767).
+1. [【第2054期】不顾一切找圆角 —— Figma 实时平滑圆角方案探究_设计](https://www.sohu.com/a/416527912_463970).
+1. [georgedoescode/squircley.js: Flexible JavaScript library for creating squircley magic ✨](https://github.com/georgedoescode/squircley.js).
