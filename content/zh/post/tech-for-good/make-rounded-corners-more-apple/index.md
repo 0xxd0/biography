@@ -132,3 +132,4 @@ if #available(iOS 13.0, *) {
 1. [Squircle - Wikipedia](https://en.wikipedia.org/wiki/Squircle)
 1. [rdar://44420870: CALayer.continuousCorners should be made public API to allow all apps to use platform-standard superlliptical corners on arbitrary views](http://www.openradar.me/44420870)
 1. [rdar://42040072: Make -[CALayer setContinuousCorners:] public](https://openradar.appspot.com/42040072)
+1. [neobeppe/Squircle: iOS Squircle rounding corner for UIView](https://github.com/neobeppe/Squircle)
