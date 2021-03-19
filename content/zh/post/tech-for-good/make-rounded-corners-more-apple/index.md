@@ -116,7 +116,7 @@ override func viewDidLoad() {
 
 但相应的提审时就需要做一些混淆防止被拒。从 iOS 13 起，CoreAnimation 终于提供了 `CALayer.cornerCurve` 用于描述曲线的渲染方式，使用 `CALayerCornerCurve.continuous` 可以绘制出 G1 连续的圆角：
 
-```
+```swift
 if #available(iOS 13.0, *) {
     view.layer.cornerCurve = .continuous
 } else {
