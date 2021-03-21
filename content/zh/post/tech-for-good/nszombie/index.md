@@ -26,4 +26,4 @@ cips:
 
 ## 进一步了解
 
-1. [NSZombie](https://github.com/lilidan/NSZombie).
+1. [NSZombie]().
