@@ -215,18 +215,18 @@ CoreFoundation`-[NSObject(NSObject) __dealloc_zombie]:
 
 方法大致流程：
 
-1. 判断 `__CFConstantStringClassReferencePtr + 7` 的值，如果为 `0` 则函数执行完毕。(类的索引值常量，与编译器内置的 `decl` 匹配)
-1. 通过 `object_getClass` 与 `class_getName` 获取当前对象的类名。
-1. 调用 `asprintf`，将类名格式化至字符串 `_NSZombie_%s`，存入 `rdi` 寄存器。
-1. 调用 `objc_lookUpClass`，查找 Zombie 类是否存在，如果不存在则新创建。
-1. 调用 `objc_lookUpClass`，获取 `_NSZombie_` 类。
-1. 调用 `objc_duplicateClass` 复制 `_NSZombie_` 类，生成新的 `_NSZombie_%s` 类。
-1. 释放字符串 `_NSZombie_%s`。
-1. 调用 `objc_destructInstance` 销毁当前实例，保留内存不释放。
-1. 通过函数 `object_setClass` 将当前对象 `isa` 指向 `_NSZombie_%s` 类。
-1. `__CFZombieEnabled` 通常与 `__CFDeallocateZombies` 互斥，判断 `__CFZombieEnabled` 是否为 `false` 或者说 `__CFDeallocateZombies` 是否为 `true`，若是则释放 Zombie 对象，释放内存。
+1. `<+37>` 判断 `__CFConstantStringClassReferencePtr + 7` 的值，如果为 `0` 则函数执行完毕。(类的索引值常量，与编译器内置的 `decl` 匹配)
+1. `<+53>` ~ `<+72>` 调用 `object_getClass` 与 `class_getName` 获取当前对象的类名。
+1. `<+77>` ~ `<+92>` 调用 `asprintf`，将类名格式化至字符串 `_NSZombie_%s`，存入 `rdi` 寄存器。
+1. `<+100>` 调用 `objc_lookUpClass`，查找 Zombie 类是否存在，如果不存在则新创建。
+1. `<+120>` 调用 `objc_lookUpClass`，获取 `_NSZombie_` 基类。
+1. `<+134>` 调用 `objc_duplicateClass` 复制 `_NSZombie_` 类，生成新的 `_NSZombie_%s` 类。
+1. `<+146>` 释放字符串 `_NSZombie_%s`。
+1. `<+154>` 调用 `objc_destructInstance` 销毁当前实例，保留内存不释放。
+1. `<+165>` 调用 `object_setClass` 将当前对象 `isa` 指向 `_NSZombie_%s` 类。
+1. `<+170>` ~ `<+182>` 判断是否释放 Zombie 对象，`__CFZombieEnabled` 通常与 `__CFDeallocateZombies` 互斥，通过判断 `__CFZombieEnabled` 是否为 `false` 或者说 `__CFDeallocateZombies` 是否为 `true`，若是则释放内存。
 
-创建 Zombie 类的工作由 `objc_duplicateClass()` 完成，它会把整个 `_NSZombie_` 类结构拷贝并赋予新的名字，父类、实例变量和方法都和复制之前相同，此函数主要被 Foundation 用于  实现 `KVO`，之所以不使用 `objc_allocateClassPair`、`objc_registerProtocol` 构造 `_NSZombie_` 继承链的原因猜测主要是性能问题。
+创建 Zombie 类的工作由 `objc_duplicateClass()` 完成，它会把整个 `_NSZombie_` 类结构拷贝并赋予新的名字，父类、实例变量和方法都和复制之前相同，此函数主要被 Foundation 用于实现 `KVO`，推测之所以不使用 `objc_allocateClassPair` 与`objc_registerProtocol` 构造 `_NSZombie_` 继承链的原因主要是出于性能方面的考虑。
 
 `_NSZombie_` 为 Root Class，没有基类同时也没有实现任何方法，只有一个 `isa` 指针。在 Objective-C 中可以被实例化的类都必须有一个 `isa` 指针用于指向 Class 对象。Objective-C 对象为 struct，通过 `class_getInstanceSize` 获取 allocation 的大小，直接使用 `malloc` 就能构造实例：
 
@@ -244,7 +244,7 @@ CoreFoundation`-[NSObject(NSObject) __dealloc_zombie]:
 
 ### `___forwarding___`
 
-Zombie 类的定位作用会在消息转发的过程中体现。上文提到 `_NSZombie_` 是一个什么方法都没有实现的 Root Class，所以任何发给它的消息都会经过 full forwarding mechanism，在完整的消息转发机制中，`___forwarding___` 是核心，Debug 时经常可以在调用栈中看到这个函数。从汇编来看 `___forwarding___` 中很重要的一个步骤是检查接受消息的对象的类名，判断前缀是否为 `_NSZombie_`：
+Zombie 类的定位作用会在消息转发的过程中体现。上文提到 `_NSZombie_` 是一个什么方法都没有实现的 Root Class，所以任何发给它的消息都会经过 full forwarding mechanism。在完整的消息转发机制中 `___forwarding___` 函数是核心，Debug 时经常可以在调用栈中看到这个函数。从汇编看 `___forwarding___` 中很重要的一个步骤是检查接受消息的对象的类名，判断前缀是否为 `_NSZombie_`：
 
 ```
 CoreFoundation`___forwarding___:
@@ -332,10 +332,10 @@ NS_ROOT_CLASS
 
 ## 进一步了解
 
-1. [Friday Q&A 2014-11-07: Let's Build NSZombie](https://www.mikeash.com/pyblog/friday-qa-2014-11-07-lets-build-nszombie.html)
+1. [Friday Q&A 2014-11-07: Let's Build NSZombie](https://www.mikeash.com/pyblog/friday-qa-2014-11-07-lets-build-nszombie.html).
 1. [Finding zombies - Instruments Help](https://help.apple.com/instruments/mac/current/#/dev612e6956).
-1. [What is NSZombie? - Stack Overflow](https://stackoverflow.com/questions/4168327/what-is-nszombie)
-1. [NSObject | Apple Developer Documentation](https://developer.apple.com/documentation/objectivec/nsobject#//apple_ref/occ/clm/NSObject/initialize)
-1. [Root class| Cocoa Core Competencies](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/RootClass.html)
-1. [What's required to implement root class of Objective-C? - Stack Overflow](https://stackoverflow.com/questions/3582209/whats-required-to-implement-root-class-of-objective-c)
-1. [objc_zombie.mm | chromium](https://chromium.googlesource.com/chromium/src/+/d2b44bd628c85b8d7150a533b6c8a6b857211aa8/chrome/browser/cocoa/objc_zombie.mm)
+1. [What is NSZombie? - Stack Overflow](https://stackoverflow.com/questions/4168327/what-is-nszombie).
+1. [NSObject | Apple Developer Documentation](https://developer.apple.com/documentation/objectivec/nsobject#//apple_ref/occ/clm/NSObject/initialize).
+1. [Root class| Cocoa Core Competencies](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/RootClass.html).
+1. [What's required to implement root class of Objective-C? - Stack Overflow](https://stackoverflow.com/questions/3582209/whats-required-to-implement-root-class-of-objective-c).
+1. [objc_zombie.mm | chromium](https://chromium.googlesource.com/chromium/src/+/d2b44bd628c85b8d7150a533b6c8a6b857211aa8/chrome/browser/cocoa/objc_zombie.mm).
